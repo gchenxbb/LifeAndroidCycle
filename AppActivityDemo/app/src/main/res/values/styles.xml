@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light.NoTitleBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!--透明主题，验证透明主题的Activity覆盖前一个时，前一个的onStop不会执行-->
+    <style name="AppThemeTranslucent" parent="android:Theme.Translucent.NoTitleBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+</resources>
