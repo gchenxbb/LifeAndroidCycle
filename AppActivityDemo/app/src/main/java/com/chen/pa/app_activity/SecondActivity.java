@@ -1,4 +1,4 @@
-package com.chen.pa.app_activitydemo;
+package com.chen.pa.app_activity;
 
 import android.app.Activity;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.chen.pa.app_activitydemo;
+package com.chen.pa.app_activity;
 
 /**
  * Created by CHENGUANG491 on 2018/10/21.

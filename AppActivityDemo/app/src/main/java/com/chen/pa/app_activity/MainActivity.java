@@ -1,4 +1,4 @@
-package com.chen.pa.app_activitydemo;
+package com.chen.pa.app_activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-
+//Activity生命周期
 public class MainActivity extends Activity {
     private boolean willGoSecondActivity = false;
 
@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
         super.onPause();
         Log.d(ActivityLogTag.TAG, getClass().getSimpleName() + " onPause");
 //        if (willGoSecondActivity) {
-//            //模拟一个耗时操作，看是否影响SecondActivity的启动
+//            //打开可模拟一个耗时操作，看是否影响SecondActivity的启动，默认注释掉
 //            try {
 //                Thread.sleep(2000);
 //            } catch (Exception e) {
