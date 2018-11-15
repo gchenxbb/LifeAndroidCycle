@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Activity One!"
+        android:textColor="#353535"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/btn_start_service"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="启动Service"
+        android:textColor="#353535"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_stop_service"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="停止Service"
+        android:textColor="#353535"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_bind_service"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="115dp"
+        android:gravity="center"
+        android:text="绑定Service"
+        android:textColor="#353535"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_unbind_service"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="170dp"
+        android:gravity="center"
+        android:text="解除绑定Service"
+        android:textColor="#353535"
+        android:textSize="24sp" />
+</FrameLayout>

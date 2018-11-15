@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.chen.pa.app_activity">
+    package="com.chen.pa">
 
     <application
         android:allowBackup="true"
@@ -8,8 +8,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".app_service.LifeCycleService"
+            android:enabled="true" />
+
         <activity
-            android:name="com.chen.pa.app_activity.MainActivity"
+            android:name=".app_activity.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +23,7 @@
         </activity>
 
         <activity
-            android:name="com.chen.pa.app_activity.SecondActivity" />
+            android:name=".app_activity.SecondActivity" />
         <!--     android:theme="@style/AppThemeTranslucent"  />-->
         <!--     当minSdkVersion和targetSdkVersion有一个大于13，配置,orientation和screenSize，旋转屏幕就不会重建Activity  />-->
         <!--     当minSdkVersion和targetSdkVersion都小于13，配置,orientation，旋转屏幕就不会重建Activity ，不重建就不会更换背景图片啦 />-->
