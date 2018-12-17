@@ -1,4 +1,4 @@
-package com.chen.pa.app_activity;
+package com.chen.pa.activity;
 
 import android.app.Activity;
 import android.app.Service;
@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.chen.pa.R;
-import com.chen.pa.app_service.LifeCycleService;
+import com.chen.pa.service.LifeCycleService;
 
 //Activity生命周期
 public class MainActivity extends Activity {

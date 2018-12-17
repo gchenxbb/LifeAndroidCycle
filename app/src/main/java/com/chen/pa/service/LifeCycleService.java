@@ -1,11 +1,11 @@
-package com.chen.pa.app_service;
+package com.chen.pa.service;
 
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.chen.pa.app_activity.LogTag;
+import com.chen.pa.activity.LogTag;
 
 
 /*
