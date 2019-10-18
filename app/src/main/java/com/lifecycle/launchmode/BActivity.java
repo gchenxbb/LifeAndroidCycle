@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.lifecycle.app.R;
-
 //生命周期-Activity-B
 public class BActivity extends Activity {
 

@@ -10,8 +10,6 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lifecycle.app.R;
-
 //在第二个Activity中配置转屏，观察Activity重建时RecycleView的状态
 //异常销毁时，顺序:onPause->onSaveInstanceState->onStop->onDestroy
 //重建启动时，顺序:onCreate->onStart->onRestoreInstanceState->onResume

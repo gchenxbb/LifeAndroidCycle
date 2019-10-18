@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 
-
 /*
  * 在Activity中绑定该service时会调OnBind方法，将IBinder返回
  * 它将service中的内容传递给activity，相当于通过Ibinder来进行通信。

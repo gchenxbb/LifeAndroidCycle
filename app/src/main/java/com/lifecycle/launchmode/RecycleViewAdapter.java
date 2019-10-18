@@ -10,8 +10,6 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lifecycle.app.R;
-
 public class RecycleViewAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     protected Context mContext;

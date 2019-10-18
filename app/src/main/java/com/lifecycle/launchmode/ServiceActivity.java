@@ -11,8 +11,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lifecycle.app.R;
-
 //生命周期-Service
 public class ServiceActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView mBtnStart;

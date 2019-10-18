@@ -1,7 +1,7 @@
 package com.lifecycle.launchmode;
 
 /**
- * Created by CHENGUANG491 on 2018/10/21.
+ * Created by chenguang on 2018/10/21.
  */
 public class LogTag {
     public static final String TAG = "AppActivityLifeCycle";
