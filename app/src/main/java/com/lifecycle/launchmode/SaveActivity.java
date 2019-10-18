@@ -1,4 +1,4 @@
-package com.chen.pa.activity;
+package com.lifecycle.launchmode;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,12 +10,12 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.chen.pa.R;
+import com.lifecycle.app.R;
 
 //在第二个Activity中配置转屏，观察Activity重建时RecycleView的状态
 //异常销毁时，顺序:onPause->onSaveInstanceState->onStop->onDestroy
 //重建启动时，顺序:onCreate->onStart->onRestoreInstanceState->onResume
-public class SecondActivity extends Activity {
+public class SaveActivity extends Activity {
     RecycleViewAdapter mRecycleViewAdapter;
     private RecyclerView mRecyvleView;
     List<String> mList = new ArrayList<>();
@@ -24,7 +24,7 @@ public class SecondActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(LogTag.TAG, getClass().getSimpleName() + " onCreate");
-        setContentView(R.layout.activity_two);
+        setContentView(R.layout.activity_save);
         initView();
     }
 

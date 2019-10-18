@@ -1,55 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp">
 
     <TextView
-        android:id="@+id/tv_main"
+        android:id="@+id/btn_life_a"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="50dp"
+        android:background="#f4f4f4"
         android:gravity="center"
-        android:text="Activity One!"
-        android:textColor="#353535"
-        android:textSize="28sp" />
+        android:text="生命周期_activity"
+        android:textSize="14sp" />
 
-    <Button
-        android:id="@+id/btn_start_service"
+    <TextView
+        android:id="@+id/btn_life_s"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
+        android:background="#f4f4f4"
         android:gravity="center"
-        android:text="启动Service"
-        android:textColor="#353535"
-        android:textSize="24sp" />
+        android:text="生命周期_service"
+        android:textSize="14sp" />
 
-    <Button
-        android:id="@+id/btn_stop_service"
+    <TextView
+        android:id="@+id/btn_launch"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="6dp"
+        android:background="#f4f4f4"
         android:gravity="center"
-        android:text="停止Service"
-        android:textColor="#353535"
-        android:textSize="24sp" />
+        android:text="启动模式"
+        android:textSize="14sp" />
 
-    <Button
-        android:id="@+id/btn_bind_service"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="115dp"
-        android:gravity="center"
-        android:text="绑定Service"
-        android:textColor="#353535"
-        android:textSize="24sp" />
-
-    <Button
-        android:id="@+id/btn_unbind_service"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="170dp"
-        android:gravity="center"
-        android:text="解除绑定Service"
-        android:textColor="#353535"
-        android:textSize="24sp" />
-</FrameLayout>
+</LinearLayout>

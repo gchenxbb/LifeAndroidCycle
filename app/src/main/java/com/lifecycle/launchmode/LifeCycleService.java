@@ -1,11 +1,9 @@
-package com.chen.pa.service;
+package com.lifecycle.launchmode;
 
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
-
-import com.chen.pa.activity.LogTag;
 
 
 /*

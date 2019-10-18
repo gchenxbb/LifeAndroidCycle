@@ -1,4 +1,4 @@
-package com.chen.pa.activity;
+package com.lifecycle.launchmode;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.chen.pa.R;
+import com.lifecycle.app.R;
 
 public class RecycleViewAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 

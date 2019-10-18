@@ -1,11 +1,11 @@
-package com.chen.pa.activity;
-
+package com.lifecycle.launchmode;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.chen.pa.R;
+import com.lifecycle.app.R;
+
 
 public class BaseViewHolder extends RecyclerView.ViewHolder {
     protected Context mContext;

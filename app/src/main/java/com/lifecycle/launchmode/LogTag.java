@@ -1,4 +1,4 @@
-package com.chen.pa.activity;
+package com.lifecycle.launchmode;
 
 /**
  * Created by CHENGUANG491 on 2018/10/21.
