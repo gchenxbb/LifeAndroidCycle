@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppLaunchModeDemo2</string>
+    <string name="task_affinity_task">com.pa.chen.task_affinity_task2</string>
+
+</resources>

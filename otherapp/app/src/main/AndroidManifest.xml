@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.launchmode.app">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--exported的默认值根据Activity中是否有intent filter来定-->
+        <!--没有Intent filter，意味只有class name才能被唤醒，这个Activity只能在应用内部使用-->
+        <!--有Intent filter说明可从应用外唤起，默认true,以下默认是true-->
+        <activity
+            android:name=".A_Activity"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="com.pa.chen.applaunchmodedemo2.activity" />    <!-- 自定义的action-->
+                <category android:name="android.intent.category.DEFAULT" /><!--必须加上这个，否则下面无法直接使用自定的action-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".B_Activity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

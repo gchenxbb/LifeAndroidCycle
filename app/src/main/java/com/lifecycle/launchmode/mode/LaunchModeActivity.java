@@ -2,7 +2,7 @@ package com.lifecycle.launchmode.mode;
 
 import android.os.Bundle;
 
-public class MainActivity extends BaseActivity {
+public class LaunchModeActivity extends BaseActivity {
 
 
     @Override
