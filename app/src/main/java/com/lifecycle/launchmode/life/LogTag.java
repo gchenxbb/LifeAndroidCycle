@@ -1,4 +1,4 @@
-package com.lifecycle.launchmode;
+package com.lifecycle.launchmode.life;
 
 /**
  * Created by chenguang on 2018/10/21.

@@ -1,39 +1,20 @@
-package com.lifecycle.launchmode;
+package com.lifecycle.launchmode.life;
 
-import android.content.Intent;
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
 
-//生命周期-activity-a
-public class AActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView mBtnB;
-    private TextView mBtnSave;
+import com.lifecycle.launchmode.R;
+
+//生命周期-Activity-B
+public class BActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_a);
-
         Log.d(LogTag.TAG, getClass().getSimpleName() + " onCreate");
+        setContentView(R.layout.activity_b);
 
-        mBtnB = findViewById(R.id.btn_life_b);
-        mBtnSave = findViewById(R.id.btn_life_save);
-
-        mBtnB.setOnClickListener(this);
-        mBtnSave.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        if (id == R.id.btn_life_b) {
-            startActivity(new Intent(AActivity.this, BActivity.class));
-        } else if (id == R.id.btn_life_save) {
-            startActivity(new Intent(AActivity.this, SaveActivity.class));
-        }
     }
 
     @Override
@@ -71,4 +52,5 @@ public class AActivity extends AppCompatActivity implements View.OnClickListener
         super.onDestroy();
         Log.d(LogTag.TAG, getClass().getSimpleName() + " onDestroy");
     }
+
 }

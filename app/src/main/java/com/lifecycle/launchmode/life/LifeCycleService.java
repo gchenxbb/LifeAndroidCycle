@@ -1,4 +1,4 @@
-package com.lifecycle.launchmode;
+package com.lifecycle.launchmode.life;
 
 import android.app.Service;
 import android.content.Intent;

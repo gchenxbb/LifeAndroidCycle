@@ -1,4 +1,4 @@
-package com.lifecycle.launchmode;
+package com.lifecycle.launchmode.life;
 
 import android.app.Service;
 import android.content.ComponentName;
@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import com.lifecycle.launchmode.R;
 
 //生命周期-Service
 public class ServiceActivity extends AppCompatActivity implements View.OnClickListener {

@@ -2,6 +2,7 @@
 
 
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar" />
+<!--    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">-->
 
     <!--透明主题，验证透明主题的Activity覆盖前一个时，前一个的onStop不会执行-->
     <style name="AppThemeTranslucent" parent="android:Theme.Translucent.NoTitleBar">

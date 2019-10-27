@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.lifecycle.launchmode.MainActivity"
+            android:name="com.lifecycle.launchmode.life.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,18 +18,57 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SaveActivity" />
-        <activity android:name=".AActivity" />
-        <activity android:name=".BActivity" />
-        <activity android:name=".ServiceActivity" />
+        <activity android:name=".life.SaveActivity" />
+        <activity android:name=".life.AActivity" />
+        <activity android:name=".life.BActivity" />
+        <activity android:name=".life.ServiceActivity" />
 
         <service
-            android:name="com.lifecycle.launchmode.LifeCycleService"
+            android:name="com.lifecycle.launchmode.life.LifeCycleService"
             android:enabled="true" />
         <!--     android:theme="@style/AppThemeTranslucent"  />-->
         <!--     当minSdkVersion和targetSdkVersion有一个大于13，配置,orientation和screenSize，旋转屏幕就不会重建Activity  />-->
         <!--     当minSdkVersion和targetSdkVersion都小于13，配置,orientation，旋转屏幕就不会重建Activity ，不重建就不会更换背景图片啦 />-->
         <!--   android:configChanges="orientation|screenSize" />-->
+
+        <activity
+            android:name=".mode.LaunchModeActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--标准-->
+        <activity
+            android:name="com.lifecycle.launchmode.mode.AActivity"
+            android:screenOrientation="portrait" />
+        <!--singleTop-->
+        <activity
+            android:name="com.lifecycle.launchmode.mode.BActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!--singleTask-->
+        <activity
+            android:name="com.lifecycle.launchmode.mode.CActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!--singleInstance-->
+        <activity
+            android:name="com.lifecycle.launchmode.mode.DActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <!--singleTask+taskAffinity -->
+        <activity
+            android:name="com.lifecycle.launchmode.mode.EActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="@string/task_affinity_task" /><!--taskAffinity是字符串，需要包含.字符，否则应用安装失败-->
+        <!--E和F在同一个栈中-->
+        <activity
+            android:name="com.lifecycle.launchmode.mode.FActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="@string/task_affinity_task" /><!--taskAffinity是字符串，需要包含.字符，否则应用安装失败-->
+
+
+
     </application>
 
 </manifest>
