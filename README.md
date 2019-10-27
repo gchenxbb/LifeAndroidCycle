@@ -1,5 +1,5 @@
-# AppActivity
-Activity生命周期
+
+### Activity生命周期
 
 正常情况下，用户全程参与所经历的状态的改变，如启动，暂停，停止，销毁等。
 异常情况下，系统回收不是用户参与的，系统配置改变如转屏幕导致的销毁重建等。
@@ -66,7 +66,7 @@ Activity重建时恢复保存的数据时，委派给Window，窗体再委派给
 
 若在Manifest中配置android：configChanges，对应配置改变时，便不会重建Activity。例如android:configChanges=orientation|keyboardHidden,这种情况就是屏幕方向与键盘弹出时，不重建Activity。
 
-###启动模式
+### 启动模式
 
 ##### standard标准模式，默认，
 
