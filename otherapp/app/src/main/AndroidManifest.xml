@@ -25,7 +25,7 @@
             android:screenOrientation="portrait"
             >
             <intent-filter>
-                <action android:name="com.pa.chen.applaunchmodedemo2.activity" />    <!-- 自定义的action-->
+                <action android:name="com.launchmode.app.activity" />    <!-- 自定义的action-->
                 <category android:name="android.intent.category.DEFAULT" /><!--必须加上这个，否则下面无法直接使用自定的action-->
             </intent-filter>
         </activity>
