@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.lifecycle.launchmode.life.MainActivity"
+            android:name="com.lifecycle.launchmode.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,8 +67,14 @@
             android:screenOrientation="portrait"
             android:taskAffinity="@string/task_affinity_task" /><!--taskAffinity是字符串，需要包含.字符，否则应用安装失败-->
 
+        <!--Activity启动流程-->
+        <activity
+            android:name="com.lifecycle.launchmode.startup.StartupOneAct"
+            android:screenOrientation="portrait" />
 
-
+        <activity
+            android:name="com.lifecycle.launchmode.startup.StartupTwoAct"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

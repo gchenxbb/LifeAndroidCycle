@@ -8,30 +8,40 @@
     <TextView
         android:id="@+id/btn_life_a"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:background="#f4f4f4"
         android:gravity="center"
         android:text="生命周期_activity"
-        android:textSize="14sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/btn_life_s"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginTop="5dp"
         android:background="#f4f4f4"
         android:gravity="center"
         android:text="生命周期_service"
-        android:textSize="14sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/btn_launch"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginTop="6dp"
         android:background="#f4f4f4"
         android:gravity="center"
         android:text="启动模式"
-        android:textSize="14sp" />
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/btn_startup_ams"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="#f4f4f4"
+        android:gravity="center"
+        android:text="Activity启动流程分析"
+        android:textSize="12sp" />
 
 </LinearLayout>
