@@ -9,7 +9,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="启动" />
-
+        android:text="启动流程分析第一个页面" />
 
 </LinearLayout>

@@ -23,9 +23,7 @@
         <activity android:name=".life.BActivity" />
         <activity android:name=".life.ServiceActivity" />
 
-        <service
-            android:name="com.lifecycle.launchmode.life.LifeCycleService"
-            android:enabled="true" />
+
         <!--     android:theme="@style/AppThemeTranslucent"  />-->
         <!--     当minSdkVersion和targetSdkVersion有一个大于13，配置,orientation和screenSize，旋转屏幕就不会重建Activity  />-->
         <!--     当minSdkVersion和targetSdkVersion都小于13，配置,orientation，旋转屏幕就不会重建Activity ，不重建就不会更换背景图片啦 />-->
@@ -33,9 +31,9 @@
 
         <activity
             android:name=".mode.LaunchModeActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
-        <!--标准-->
+        <!--standard-->
         <activity
             android:name="com.lifecycle.launchmode.mode.AActivity"
             android:screenOrientation="portrait" />
@@ -54,27 +52,31 @@
             android:name="com.lifecycle.launchmode.mode.DActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait" />
-        <!--singleTask+taskAffinity -->
+        <!--singleTask with taskAffinity-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.EActivity"
+            android:name="com.lifecycle.launchmode.mode.ETaskAffinityActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:taskAffinity="@string/task_affinity_task" /><!--taskAffinity是字符串，需要包含.字符，否则应用安装失败-->
-        <!--E和F在同一个栈中-->
+        <!--singleTask with taskAffinity E和F在同一个栈中 E和F在同一个栈中-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.FActivity"
+            android:name="com.lifecycle.launchmode.mode.FTaskAffinityActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:taskAffinity="@string/task_affinity_task" /><!--taskAffinity是字符串，需要包含.字符，否则应用安装失败-->
+            android:taskAffinity="@string/task_affinity_task" />
 
-        <!--Activity启动流程-->
+        <!--Activity启动流程1-->
         <activity
             android:name="com.lifecycle.launchmode.startup.StartupOneAct"
             android:screenOrientation="portrait" />
-
+        <!--Activity启动流程2-->
         <activity
             android:name="com.lifecycle.launchmode.startup.StartupTwoAct"
             android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.lifecycle.launchmode.life.LifeCycleService"
+            android:enabled="true" />
     </application>
 
 </manifest>

@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:gravity="center"
-        android:text="EActivity singleTask+taskAffinity" />
+        android:text="ETaskAffinityActivity singleTask+taskAffinity" />
 
     <TextView
         android:id="@+id/singleTask_taskAffinity2"

@@ -55,9 +55,9 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v == mTvSingleInstance) {
             startActivity(new Intent(BaseActivity.this, DActivity.class));
         } else if (v == mTvSingleTaskAffinity1) {
-            startActivity(new Intent(BaseActivity.this, EActivity.class));
+            startActivity(new Intent(BaseActivity.this, ETaskAffinityActivity.class));
         } else if (v == mTvSingleTaskAffinity2) {
-            startActivity(new Intent(BaseActivity.this, FActivity.class));
+            startActivity(new Intent(BaseActivity.this, FTaskAffinityActivity.class));
         } else if (v == mTvOtherProcess) {
             try {
                 Intent intent = new Intent();

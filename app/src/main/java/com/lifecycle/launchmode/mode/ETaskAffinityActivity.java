@@ -6,22 +6,22 @@ import android.util.Log;
 import android.widget.Toast;
 
 /**
- * singleTop
+ * singleTask with taskAffinity
  */
-public class BActivity extends BaseActivity {
-
-    public static final String TAG = "BActivity";
+public class ETaskAffinityActivity extends BaseActivity {
+    public static final String TAG = "CActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
-    //栈顶，singleTop模式，调用
+    //栈中，singleTask模式，调用
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         Log.d(TAG, "onNewIntent == > 调用");
-        Toast.makeText(BActivity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
+        Toast.makeText(ETaskAffinityActivity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
     }
 }
+
