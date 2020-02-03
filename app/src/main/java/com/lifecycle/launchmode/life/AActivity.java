@@ -7,25 +7,21 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.lifecycle.launchmode.TagLog;
 import com.lifecycle.launchmode.R;
 
 //生命周期-activity-a
 public class AActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView mBtnB;
-    private TextView mBtnSave;
+    private String className = getClass().getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a);
-
-        Log.d(LogTag.TAG, getClass().getSimpleName() + " onCreate");
-
+        Log.d(TagLog.TAG, className + " onCreate");
         mBtnB = findViewById(R.id.btn_life_b);
-        mBtnSave = findViewById(R.id.btn_life_save);
-
         mBtnB.setOnClickListener(this);
-        mBtnSave.setOnClickListener(this);
     }
 
     @Override
@@ -33,44 +29,42 @@ public class AActivity extends AppCompatActivity implements View.OnClickListener
         int id = v.getId();
         if (id == R.id.btn_life_b) {
             startActivity(new Intent(AActivity.this, BActivity.class));
-        } else if (id == R.id.btn_life_save) {
-            startActivity(new Intent(AActivity.this, SaveActivity.class));
         }
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(LogTag.TAG, getClass().getSimpleName() + " onRestart");
+        Log.d(TagLog.TAG, className + " onRestart");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(LogTag.TAG, getClass().getSimpleName() + " onStart");
+        Log.d(TagLog.TAG, className + " onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(LogTag.TAG, getClass().getSimpleName() + " onResume");
+        Log.d(TagLog.TAG, className + " onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(LogTag.TAG, getClass().getSimpleName() + " onPause");
+        Log.d(TagLog.TAG, className + " onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(LogTag.TAG, getClass().getSimpleName() + " onStop");
+        Log.d(TagLog.TAG, className + " onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(LogTag.TAG, getClass().getSimpleName() + " onDestroy");
+        Log.d(TagLog.TAG, className + " onDestroy");
     }
 }

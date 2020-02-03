@@ -1,4 +1,4 @@
-package com.lifecycle.launchmode.life;
+package com.lifecycle.launchmode.saverestore;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

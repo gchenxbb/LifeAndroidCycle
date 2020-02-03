@@ -8,7 +8,7 @@ import android.widget.Toast;
 /**
  * singleTop
  */
-public class BActivity extends BaseActivity {
+public class SingleTopActivity extends BaseActivity {
 
     public static final String TAG = "BActivity";
 
@@ -22,6 +22,6 @@ public class BActivity extends BaseActivity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         Log.d(TAG, "onNewIntent == > 调用");
-        Toast.makeText(BActivity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
+        Toast.makeText(SingleTopActivity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
     }
 }

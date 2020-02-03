@@ -1,9 +1,11 @@
-package com.lifecycle.launchmode.life;
+package com.lifecycle.launchmode.service;
 
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
+
+import com.lifecycle.launchmode.TagLog;
 
 /*
  * 在Activity中绑定该service时会调OnBind方法，将IBinder返回
@@ -15,36 +17,36 @@ import android.util.Log;
 public class LifeCycleService extends Service {
 
     public LifeCycleService() {
-        Log.d(LogTag.TAG_SERVICE, getClass().getSimpleName() + " LifeCycleService 构造方法");
+        Log.d(TagLog.TAG_SERVICE, getClass().getSimpleName() + " LifeCycleService 构造方法");
     }
 
     @Override
     public IBinder onBind(Intent intent) {
-        Log.d(LogTag.TAG_SERVICE, getClass().getSimpleName() + " onBind");
+        Log.d(TagLog.TAG_SERVICE, getClass().getSimpleName() + " onBind");
         return null;
     }
 
     @Override
     public boolean onUnbind(Intent intent) {
-        Log.d(LogTag.TAG_SERVICE, getClass().getSimpleName() + " onUnbind");
+        Log.d(TagLog.TAG_SERVICE, getClass().getSimpleName() + " onUnbind");
         return true;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d(LogTag.TAG_SERVICE, getClass().getSimpleName() + " onDestroy");
+        Log.d(TagLog.TAG_SERVICE, getClass().getSimpleName() + " onDestroy");
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d(LogTag.TAG_SERVICE, getClass().getSimpleName() + " onCreate");
+        Log.d(TagLog.TAG_SERVICE, getClass().getSimpleName() + " onCreate");
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d(LogTag.TAG_SERVICE, getClass().getSimpleName() + " onStartCommand");
+        Log.d(TagLog.TAG_SERVICE, getClass().getSimpleName() + " onStartCommand");
         return super.onStartCommand(intent, flags, startId);
     }
 }

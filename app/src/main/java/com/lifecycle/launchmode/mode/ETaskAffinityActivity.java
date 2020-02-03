@@ -9,7 +9,7 @@ import android.widget.Toast;
  * singleTask with taskAffinity
  */
 public class ETaskAffinityActivity extends BaseActivity {
-    public static final String TAG = "CActivity";
+    public static final String TAG = "ETaskAffinityActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,4 +24,3 @@ public class ETaskAffinityActivity extends BaseActivity {
         Toast.makeText(ETaskAffinityActivity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
     }
 }
-

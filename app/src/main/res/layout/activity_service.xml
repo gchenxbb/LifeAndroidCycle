@@ -14,7 +14,7 @@
         android:gravity="center"
         android:text="启动Service"
         android:textColor="#333333"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/btn_stop_service"
@@ -25,7 +25,7 @@
         android:gravity="center"
         android:text="停止Service"
         android:textColor="#333333"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/btn_bind_service"
@@ -36,7 +36,7 @@
         android:gravity="center"
         android:text="绑定Service"
         android:textColor="#333333"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/btn_unbind_service"
@@ -47,6 +47,6 @@
         android:gravity="center"
         android:text="解除绑定Service"
         android:textColor="#333333"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
 </LinearLayout>

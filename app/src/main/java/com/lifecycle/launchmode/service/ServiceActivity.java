@@ -1,4 +1,4 @@
-package com.lifecycle.launchmode.life;
+package com.lifecycle.launchmode.service;
 
 import android.app.Service;
 import android.content.ComponentName;
@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.lifecycle.launchmode.TagLog;
 import com.lifecycle.launchmode.R;
 
 //生命周期-Service
@@ -63,7 +64,7 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
             }, Service.BIND_AUTO_CREATE);
         } else if (id == R.id.btn_unbind_service) {
             if (mCon == null) {
-                Log.d(LogTag.TAG_SERVICE, "Service not registered");
+                Log.d(TagLog.TAG_SERVICE, "Service not registered");
             } else {
                 unbindService(mCon);
                 mCon = null;
@@ -74,6 +75,6 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(LogTag.TAG, getClass().getSimpleName() + " onPause");
+        Log.d(TagLog.TAG, getClass().getSimpleName() + " onPause");
     }
 }

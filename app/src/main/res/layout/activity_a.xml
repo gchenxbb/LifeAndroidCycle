@@ -12,17 +12,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:gravity="center"
-        android:text="启动B"
-        android:textColor="#353535"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/btn_life_save"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="保存状态"
+        android:text="启动BActivity"
         android:textColor="#353535"
         android:textSize="18sp" />
 

@@ -7,15 +7,28 @@
     <TextView
         android:id="@+id/tv_a_activity"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:gravity="center"
         android:text="AActivity " />
 
     <TextView
         android:id="@+id/tv_b_activity"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:gravity="center"
         android:text="BActivity " />
 
+    <TextView
+        android:id="@+id/tv_c_activity"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="CActivity " />
+
+    <TextView
+        android:id="@+id/tv_d_activity"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="DActivity " />
 </LinearLayout>

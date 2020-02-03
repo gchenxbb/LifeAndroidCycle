@@ -7,13 +7,15 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.lifecycle.launchmode.life.AActivity;
-import com.lifecycle.launchmode.life.ServiceActivity;
+import com.lifecycle.launchmode.saverestore.SaveActivity;
+import com.lifecycle.launchmode.service.ServiceActivity;
 import com.lifecycle.launchmode.mode.LaunchModeActivity;
 import com.lifecycle.launchmode.startup.StartupOneAct;
 
 //Demo main
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView mBtnLifeA;
+    private TextView mBtnSave;
     private TextView mBtnLifeS;
     private TextView mBtnLaunch;
     private TextView mBtnStartUp;
@@ -30,7 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnLifeA = findViewById(R.id.btn_life_a);
         mBtnLifeS = findViewById(R.id.btn_life_s);
         mBtnStartUp = findViewById(R.id.btn_startup_ams);
+        mBtnSave = findViewById(R.id.btn_life_save);
 
+        mBtnSave.setOnClickListener(this);
         mBtnLaunch.setOnClickListener(this);
         mBtnLifeA.setOnClickListener(this);
         mBtnLifeS.setOnClickListener(this);
@@ -49,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(MainActivity.this, ServiceActivity.class));
         } else if (id == R.id.btn_startup_ams) {
             startActivity(new Intent(MainActivity.this, StartupOneAct.class));
+        } else if (id == R.id.btn_life_save) {
+            startActivity(new Intent(MainActivity.this, SaveActivity.class));
         }
     }
 }

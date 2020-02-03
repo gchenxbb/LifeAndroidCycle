@@ -1,56 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/standard"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="AActivity standard" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/singleTop"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="BActivity singleTop" />
+        <TextView
+            android:id="@+id/standard"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="standard" />
 
-    <TextView
-        android:id="@+id/singleTask"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="CActivity singleTask" />
+        <TextView
+            android:id="@+id/singleTop"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="singleTop" />
 
-    <TextView
-        android:id="@+id/singleInstance"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="DActivity singleInstance" />
+        <TextView
+            android:id="@+id/singleTask"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="singleTask" />
 
-    <TextView
-        android:id="@+id/singleTask_taskAffinity1"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="ETaskAffinityActivity singleTask+taskAffinity" />
+        <TextView
+            android:id="@+id/singleInstance"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="singleInstance" />
 
-    <TextView
-        android:id="@+id/singleTask_taskAffinity2"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="FActivity singleTask+taskAffinity" />
+        <TextView
+            android:id="@+id/singleTask_taskAffinity1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="ETaskAffinityActivity singleTask+taskAffinity" />
+
+        <TextView
+            android:id="@+id/singleTask_taskAffinity2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="FTaskAffinityActivity singleTask+taskAffinity" />
 
 
-    <TextView
-        android:id="@+id/other_process"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
-        android:text="Other process " />
-</LinearLayout>
+        <TextView
+            android:id="@+id/other_process1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Other process1 standard " />
+
+        <TextView
+            android:id="@+id/other_process2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Other process2 singletop" />
+
+
+        <TextView
+            android:id="@+id/other_process3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Other process3 singleTask" />
+
+        <TextView
+            android:id="@+id/other_process4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Other process4 singleTask + taskAffinity" />
+    </LinearLayout>
+
+</ScrollView>

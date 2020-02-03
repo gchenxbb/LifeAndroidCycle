@@ -18,11 +18,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".life.SaveActivity" />
+        <!--生命周期-->
         <activity android:name=".life.AActivity" />
         <activity android:name=".life.BActivity" />
-        <activity android:name=".life.ServiceActivity" />
-
+        <activity android:name=".service.ServiceActivity" />
+        
+        <!--保存状态-->
+        <activity android:name=".saverestore.SaveActivity" />
 
         <!--     android:theme="@style/AppThemeTranslucent"  />-->
         <!--     当minSdkVersion和targetSdkVersion有一个大于13，配置,orientation和screenSize，旋转屏幕就不会重建Activity  />-->
@@ -35,21 +37,21 @@
 
         <!--standard-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.AActivity"
+            android:name="com.lifecycle.launchmode.mode.StandardActivity"
             android:screenOrientation="portrait" />
         <!--singleTop-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.BActivity"
+            android:name="com.lifecycle.launchmode.mode.SingleTopActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <!--singleTask-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.CActivity"
+            android:name="com.lifecycle.launchmode.mode.SingleTaskActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <!--singleInstance-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.DActivity"
+            android:name="com.lifecycle.launchmode.mode.SingleInstanceActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait" />
         <!--singleTask with taskAffinity-->
@@ -74,8 +76,9 @@
             android:name="com.lifecycle.launchmode.startup.StartupTwoAct"
             android:screenOrientation="portrait" />
 
+        <!--service启动流程-->
         <service
-            android:name="com.lifecycle.launchmode.life.LifeCycleService"
+            android:name="com.lifecycle.launchmode.service.LifeCycleService"
             android:enabled="true" />
     </application>
 

@@ -1,9 +1,6 @@
 package com.lifecycle.launchmode.startup;
 
 import android.app.Activity;
-
-import android.app.Application;
-import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,8 +9,6 @@ import com.lifecycle.launchmode.R;
 
 public class StartupOneAct extends Activity implements View.OnClickListener {
 
-    Service service;
-    Application application;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,10 +22,4 @@ public class StartupOneAct extends Activity implements View.OnClickListener {
             startActivity(new Intent(StartupOneAct.this, StartupTwoAct.class));
         }
     }
-
-
-
-
-
-
 }

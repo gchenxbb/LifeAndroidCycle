@@ -13,6 +13,7 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -22,17 +23,43 @@
         <!--有Intent filter说明可从应用外唤起，默认true,以下默认是true-->
         <activity
             android:name=".A_Activity"
-            android:screenOrientation="portrait"
-            >
+            android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="com.launchmode.app.activity" />    <!-- 自定义的action-->
+                <action android:name="com.launchmode.app.activitya" />    <!-- 自定义的action-->
                 <category android:name="android.intent.category.DEFAULT" /><!--必须加上这个，否则下面无法直接使用自定的action-->
             </intent-filter>
         </activity>
+
         <activity
             android:name=".B_Activity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.launchmode.app.activityb" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".C_Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.launchmode.app.activityc" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".D_Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="@string/task_affinity_task">
+            <intent-filter>
+                <action android:name="com.launchmode.app.activityd" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
