@@ -13,5 +13,4 @@ public class StandardActivity extends BaseActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
     }
 
-
 }

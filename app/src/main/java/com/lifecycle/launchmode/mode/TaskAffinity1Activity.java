@@ -8,8 +8,8 @@ import android.widget.Toast;
 /**
  * singleTask with taskAffinity
  */
-public class FTaskAffinityActivity extends BaseActivity {
-    public static final String TAG = "FTaskAffinityActivity";
+public class TaskAffinity1Activity extends BaseActivity {
+    public static final String TAG = "ETaskAffinityActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,6 @@ public class FTaskAffinityActivity extends BaseActivity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         Log.d(TAG, "onNewIntent == > 调用");
-        Toast.makeText(FTaskAffinityActivity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
+        Toast.makeText(TaskAffinity1Activity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
     }
 }
-

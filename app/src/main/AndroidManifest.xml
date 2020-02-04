@@ -22,7 +22,7 @@
         <activity android:name=".life.AActivity" />
         <activity android:name=".life.BActivity" />
         <activity android:name=".service.ServiceActivity" />
-        
+
         <!--保存状态-->
         <activity android:name=".saverestore.SaveActivity" />
 
@@ -56,13 +56,13 @@
             android:screenOrientation="portrait" />
         <!--singleTask with taskAffinity-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.ETaskAffinityActivity"
+            android:name="com.lifecycle.launchmode.mode.TaskAffinity1Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:taskAffinity="@string/task_affinity_task" /><!--taskAffinity是字符串，需要包含.字符，否则应用安装失败-->
         <!--singleTask with taskAffinity E和F在同一个栈中 E和F在同一个栈中-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.FTaskAffinityActivity"
+            android:name="com.lifecycle.launchmode.mode.TaskAffinity2Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:taskAffinity="@string/task_affinity_task" />

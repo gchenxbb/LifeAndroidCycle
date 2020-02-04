@@ -6,79 +6,225 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/standard"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:background="#a4f4f4"
             android:gravity="center"
             android:text="standard" />
 
         <TextView
+            android:id="@+id/standard_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="和启动者在一个任务栈中"
+            android:textColor="#353535"
+            android:textSize="10sp" />
+
+        <TextView
             android:id="@+id/singleTop"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:background="#a4f4f4"
             android:gravity="center"
             android:text="singleTop" />
 
         <TextView
+            android:id="@+id/singleTop_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="和启动者在一个任务栈中"
+            android:textColor="#353535"
+            android:textSize="10sp" />
+
+        <TextView
             android:id="@+id/singleTask"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:background="#a4f4f4"
             android:gravity="center"
             android:text="singleTask" />
 
         <TextView
+            android:id="@+id/singleTask_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="未配置taskAffinity，和启动者在一个任务栈中"
+            android:textColor="#353535"
+            android:textSize="10sp" />
+
+        <TextView
             android:id="@+id/singleInstance"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:background="#a4f4f4"
             android:gravity="center"
             android:text="singleInstance" />
 
         <TextView
+            android:id="@+id/singleInstance_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="新开任务栈，栈中唯一"
+            android:textColor="#353535"
+            android:textSize="10sp" />
+
+        <TextView
             android:id="@+id/singleTask_taskAffinity1"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:background="#d4f4f4"
             android:gravity="center"
-            android:text="ETaskAffinityActivity singleTask+taskAffinity" />
+            android:text="singleTask+taskAffinity 1" />
+
+        <TextView
+            android:id="@+id/singleTask_taskAffinity1_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="配置和appid不同的taskAffinity，新开启一个任务栈"
+            android:textColor="#353535"
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/singleTask_taskAffinity2"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:background="#d4f4f4"
             android:gravity="center"
-            android:text="FTaskAffinityActivity singleTask+taskAffinity" />
+            android:text="singleTask+taskAffinity 2" />
 
+        <TextView
+            android:id="@+id/singleTask_taskAffinity2_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="配置和appid不同的taskAffinity，和上面1相同，如果1已经开启过新栈，和它在同一个任务栈"
+            android:textColor="#353535"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/other_process_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="#f4f4f4"
+            android:gravity="center"
+            android:text="以下是打开其他进程app"
+            android:textColor="#353535"
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/other_process1"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:background="#f4a4f4"
             android:gravity="center"
             android:text="Other process1 standard " />
 
         <TextView
+            android:id="@+id/other_process1_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="打开的activity配置成standard模式"
+            android:textColor="#353535"
+            android:textSize="10sp" />
+
+        <TextView
             android:id="@+id/other_process2"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:background="#f4a4f4"
             android:gravity="center"
-            android:text="Other process2 singletop" />
+            android:text="Other process2 standard + allowTaskReparenting" />
 
+        <TextView
+            android:id="@+id/other_process2_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="打开的activity配置成standard + allowTaskReparenting模式"
+            android:textColor="#353535"
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/other_process3"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:background="#f4a4f4"
             android:gravity="center"
-            android:text="Other process3 singleTask" />
+            android:text="Other process3 singletop" />
+
+        <TextView
+            android:id="@+id/other_process3_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="打开的activity配置成singleTop模式"
+            android:textColor="#353535"
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/other_process4"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:background="#f4a4f4"
             android:gravity="center"
-            android:text="Other process4 singleTask + taskAffinity" />
+            android:text="Other process4 singleTop + allowTaskReparenting" />
+
+        <TextView
+            android:id="@+id/other_process4_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="打开的activity配置成singleTop + allowTaskReparenting模式"
+            android:textColor="#353535"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/other_process5"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#f4a4f4"
+            android:gravity="center"
+            android:text="Other process5 singleTask" />
+
+        <TextView
+            android:id="@+id/other_process5_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="打开的activity配置成singleTask"
+            android:textColor="#353535"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/other_process6"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#f4a4f4"
+            android:gravity="center"
+            android:text="Other process6 singleTask + taskAffinity" />
+
+        <TextView
+            android:id="@+id/other_process6_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="打开的activity配置成singleTask + taskAffinity模式"
+            android:textColor="#353535"
+            android:textSize="10sp" />
+
+
     </LinearLayout>
 
 </ScrollView>

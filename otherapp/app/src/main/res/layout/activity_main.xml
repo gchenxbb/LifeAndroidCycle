@@ -2,33 +2,94 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <TextView
-        android:id="@+id/tv_a_activity"
+        android:id="@+id/tv_standard"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="40dp"
+        android:background="#d4f4f4"
         android:gravity="center"
-        android:text="AActivity " />
+        android:text="Standard_Activity" />
 
     <TextView
-        android:id="@+id/tv_b_activity"
+        android:id="@+id/tv_standard_desc"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="BActivity " />
+        android:text="和启动者在一个任务栈中"
+        android:textColor="#353535"
+        android:textSize="10sp" />
 
     <TextView
-        android:id="@+id/tv_c_activity"
+        android:id="@+id/tv_standard_atr"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="40dp"
+        android:background="#d4f4f4"
         android:gravity="center"
-        android:text="CActivity " />
+        android:text="Standard_Atr_Activity" />
 
     <TextView
-        android:id="@+id/tv_d_activity"
+        android:id="@+id/tv_singleTop"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#d4f4f4"
         android:gravity="center"
-        android:text="DActivity " />
+        android:text="SingleTop_Activity " />
+
+    <TextView
+        android:id="@+id/singleTop_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="和启动者在一个任务栈中"
+        android:textColor="#353535"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_singleTop_atr"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#d4f4f4"
+        android:gravity="center"
+        android:text="SingleTop_Atr_Activity" />
+
+    <TextView
+        android:id="@+id/tv_singleTask"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#d4f4f4"
+        android:gravity="center"
+        android:text="SingleTask_Activity " />
+
+    <TextView
+        android:id="@+id/tv_singleTask_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="如果启动者是本app，和启动者在一个任务栈中，如果启动者是外部app，在本appid的栈中查找并创建，
+返回时会回到本app上一个栈元素。"
+        android:textColor="#353535"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_singleTask_af"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#d4f4f4"
+        android:gravity="center"
+        android:text="SingleTask_Af_Activity " />
+
+    <TextView
+        android:id="@+id/tv_singleTask_af_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="如果启动者是本app或外部app，新开一个任务栈，区别与本appid任务栈
+返回时，回到前一个app栈，因为这是本app新开的栈，当前只有它自己。"
+        android:textColor="#353535"
+        android:textSize="10sp" />
 </LinearLayout>

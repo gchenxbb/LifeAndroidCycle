@@ -24,4 +24,5 @@ public class SingleTopActivity extends BaseActivity {
         Log.d(TAG, "onNewIntent == > 调用");
         Toast.makeText(SingleTopActivity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
     }
+
 }

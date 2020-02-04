@@ -18,11 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <!--exported的默认值根据Activity中是否有intent filter来定-->
         <!--没有Intent filter，意味只有class name才能被唤醒，这个Activity只能在应用内部使用-->
         <!--有Intent filter说明可从应用外唤起，默认true,以下默认是true-->
         <activity
-            android:name=".A_Activity"
+            android:name=".Standard_Activity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="com.launchmode.app.activitya" />    <!-- 自定义的action-->
@@ -30,8 +31,20 @@
             </intent-filter>
         </activity>
 
+        <!--standard + allowTaskReparenting-->
         <activity
-            android:name=".B_Activity"
+            android:name=".Standard_aTR_Activity"
+            android:allowTaskReparenting="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.launchmode.app.activitya_atr" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--singleTop-->
+        <activity
+            android:name=".SingleTop_Activity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -40,8 +53,21 @@
             </intent-filter>
         </activity>
 
+        <!--singleTop + allowTaskReparenting-->
         <activity
-            android:name=".C_Activity"
+            android:name=".SingleTop_aTR_Activity"
+            android:allowTaskReparenting="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.launchmode.app.activityb_atr" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--singleTask-->
+        <activity
+            android:name=".SingleTask_Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -50,13 +76,14 @@
             </intent-filter>
         </activity>
 
+        <!--singleTask + affinity -->
         <activity
-            android:name=".D_Activity"
+            android:name=".SingleTask_Af_Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:taskAffinity="@string/task_affinity_task">
             <intent-filter>
-                <action android:name="com.launchmode.app.activityd" />
+                <action android:name="com.launchmode.app.activityc_af" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

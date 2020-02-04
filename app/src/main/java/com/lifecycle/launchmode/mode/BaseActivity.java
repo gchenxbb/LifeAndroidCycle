@@ -9,6 +9,9 @@ import android.widget.Toast;
 
 import com.lifecycle.launchmode.R;
 
+/**
+ * 基类，启动模式中所有测试类都继承它。
+ */
 public class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
     protected TextView mTvStandard;
@@ -22,6 +25,8 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     protected TextView mTvOtherProcess2;
     protected TextView mTvOtherProcess3;
     protected TextView mTvOtherProcess4;
+    protected TextView mTvOtherProcess5;
+    protected TextView mTvOtherProcess6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +37,12 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         StringBuilder sbtitle = new StringBuilder();
         sbtitle.append(this.getClass().getSimpleName());
         sbtitle.append("\t");
+        sbtitle.append("任务栈Id");
+        sbtitle.append("\t");
         sbtitle.append(getTaskId());
         setTitle(sbtitle);
 
-        mTvStandard = findViewById(R.id.standard);
-        mTvSingleTop = findViewById(R.id.singleTop);
-        mTvSingleTask = findViewById(R.id.singleTask);
-        mTvSingleInstance = findViewById(R.id.singleInstance);
-        mTvSingleTaskAffinity1 = findViewById(R.id.singleTask_taskAffinity1);
-        mTvSingleTaskAffinity2 = findViewById(R.id.singleTask_taskAffinity2);
-
-        mTvOtherProcess1 = findViewById(R.id.other_process1);
-        mTvOtherProcess2 = findViewById(R.id.other_process2);
-        mTvOtherProcess3 = findViewById(R.id.other_process3);
-        mTvOtherProcess4 = findViewById(R.id.other_process4);
-
+        bindView();
         bindLinstener();
     }
 
@@ -61,9 +57,9 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v == mTvSingleInstance) {
             startActivity(new Intent(BaseActivity.this, SingleInstanceActivity.class));
         } else if (v == mTvSingleTaskAffinity1) {
-            startActivity(new Intent(BaseActivity.this, ETaskAffinityActivity.class));
+            startActivity(new Intent(BaseActivity.this, TaskAffinity1Activity.class));
         } else if (v == mTvSingleTaskAffinity2) {
-            startActivity(new Intent(BaseActivity.this, FTaskAffinityActivity.class));
+            startActivity(new Intent(BaseActivity.this, TaskAffinity2Activity.class));
         } else if (v == mTvOtherProcess1) {
             try {
                 Intent intent = new Intent();
@@ -75,7 +71,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v == mTvOtherProcess2) {
             try {
                 Intent intent = new Intent();
-                intent.setAction("com.launchmode.app.activityb");
+                intent.setAction("com.launchmode.app.activitya_atr");
                 startActivity(intent);
             } catch (Exception e) {
                 Toast.makeText(BaseActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
@@ -83,7 +79,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v == mTvOtherProcess3) {
             try {
                 Intent intent = new Intent();
-                intent.setAction("com.launchmode.app.activityc");
+                intent.setAction("com.launchmode.app.activityb");
                 startActivity(intent);
             } catch (Exception e) {
                 Toast.makeText(BaseActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
@@ -91,12 +87,44 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v == mTvOtherProcess4) {
             try {
                 Intent intent = new Intent();
-                intent.setAction("com.launchmode.app.activityd");
+                intent.setAction("com.launchmode.app.activityb_atr");
+                startActivity(intent);
+            } catch (Exception e) {
+                Toast.makeText(BaseActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
+            }
+        } else if (v == mTvOtherProcess5) {
+            try {
+                Intent intent = new Intent();
+                intent.setAction("com.launchmode.app.activityc");
+                startActivity(intent);
+            } catch (Exception e) {
+                Toast.makeText(BaseActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
+            }
+        } else if (v == mTvOtherProcess6) {
+            try {
+                Intent intent = new Intent();
+                intent.setAction("com.launchmode.app.activityc_af");
                 startActivity(intent);
             } catch (Exception e) {
                 Toast.makeText(BaseActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
             }
         }
+    }
+
+    private void bindView() {
+        mTvStandard = findViewById(R.id.standard);
+        mTvSingleTop = findViewById(R.id.singleTop);
+        mTvSingleTask = findViewById(R.id.singleTask);
+        mTvSingleInstance = findViewById(R.id.singleInstance);
+        mTvSingleTaskAffinity1 = findViewById(R.id.singleTask_taskAffinity1);
+        mTvSingleTaskAffinity2 = findViewById(R.id.singleTask_taskAffinity2);
+
+        mTvOtherProcess1 = findViewById(R.id.other_process1);
+        mTvOtherProcess2 = findViewById(R.id.other_process2);
+        mTvOtherProcess3 = findViewById(R.id.other_process3);
+        mTvOtherProcess4 = findViewById(R.id.other_process4);
+        mTvOtherProcess5 = findViewById(R.id.other_process4);
+        mTvOtherProcess6 = findViewById(R.id.other_process4);
     }
 
     private void bindLinstener() {

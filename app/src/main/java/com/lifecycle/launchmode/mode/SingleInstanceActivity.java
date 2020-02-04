@@ -5,10 +5,11 @@ import android.os.Bundle;
 /**
  * singleInstance
  */
-public class SingleInstanceActivity extends BaseActivity   {
+public class SingleInstanceActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
 }

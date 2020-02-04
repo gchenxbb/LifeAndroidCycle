@@ -11,7 +11,7 @@ import com.lifecycle.launchmode.TagLog;
 import com.lifecycle.launchmode.R;
 
 //生命周期-activity-a
-public class AActivity extends AppCompatActivity implements View.OnClickListener {
+public class AActivity extends AppCompatActivity {
     private TextView mBtnB;
     private String className = getClass().getSimpleName();
 
@@ -21,15 +21,12 @@ public class AActivity extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_a);
         Log.d(TagLog.TAG, className + " onCreate");
         mBtnB = findViewById(R.id.btn_life_b);
-        mBtnB.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        if (id == R.id.btn_life_b) {
-            startActivity(new Intent(AActivity.this, BActivity.class));
-        }
+        mBtnB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AActivity.this, BActivity.class));
+            }
+        });
     }
 
     @Override

@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     protected void initView() {
+        setTitle(getResources().getString(R.string.app_name_title));
+
         mBtnLaunch = findViewById(R.id.btn_launch);
         mBtnLifeA = findViewById(R.id.btn_life_a);
         mBtnLifeS = findViewById(R.id.btn_life_s);
@@ -40,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnLifeS.setOnClickListener(this);
         mBtnStartUp.setOnClickListener(this);
     }
-
 
     @Override
     public void onClick(View v) {
@@ -57,4 +58,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(MainActivity.this, SaveActivity.class));
         }
     }
+
 }
