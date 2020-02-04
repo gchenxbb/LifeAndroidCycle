@@ -123,8 +123,8 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         mTvOtherProcess2 = findViewById(R.id.other_process2);
         mTvOtherProcess3 = findViewById(R.id.other_process3);
         mTvOtherProcess4 = findViewById(R.id.other_process4);
-        mTvOtherProcess5 = findViewById(R.id.other_process4);
-        mTvOtherProcess6 = findViewById(R.id.other_process4);
+        mTvOtherProcess5 = findViewById(R.id.other_process5);
+        mTvOtherProcess6 = findViewById(R.id.other_process6);
     }
 
     private void bindLinstener() {
@@ -138,6 +138,8 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         mTvOtherProcess2.setOnClickListener(this);
         mTvOtherProcess3.setOnClickListener(this);
         mTvOtherProcess4.setOnClickListener(this);
+        mTvOtherProcess5.setOnClickListener(this);
+        mTvOtherProcess6.setOnClickListener(this);
     }
 
 }
