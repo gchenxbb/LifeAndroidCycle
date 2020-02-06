@@ -10,12 +10,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.lifecycle.launchmode.TagLog;
 import com.lifecycle.launchmode.R;
 
-//生命周期-Service
-public class ServiceActivity extends AppCompatActivity implements View.OnClickListener {
+/**
+ * 生命周期-Service
+ *
+ * 当前现象是：绑定多次，解绑，不会调用onCreate，onBind，unBind和onDestory
+ */
+public class ServiceLifeCycleActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private final static String TAG_SERVICE = "ServiceLifeCycle";
+
     private TextView mBtnStart;
     private TextView mBtnStop;
     private TextView mBtnBind;
@@ -47,34 +54,36 @@ public class ServiceActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         int id = v.getId();
         if (id == R.id.btn_start_service) {
-            startService(new Intent(ServiceActivity.this, LifeCycleService.class));
+            startService(new Intent(ServiceLifeCycleActivity.this, LifeCycleService.class));
         } else if (id == R.id.btn_stop_service) {
-            stopService(new Intent(ServiceActivity.this, LifeCycleService.class));
+            stopService(new Intent(ServiceLifeCycleActivity.this, LifeCycleService.class));
         } else if (id == R.id.btn_bind_service) {
-            bindService(new Intent(ServiceActivity.this, LifeCycleService.class), mCon = new ServiceConnection() {
+            Intent intent = new Intent(ServiceLifeCycleActivity.this, LifeCycleService.class);
+            bindService(intent, mCon = new ServiceConnection() {
                 @Override
                 public void onServiceConnected(ComponentName name, IBinder service) {
-
+                    //必须在onBind方法返回对象才会调用
+                    Log.d(TAG_SERVICE, "Service Connected:" + name.getClassName());
+                    Toast.makeText(ServiceLifeCycleActivity.this, "Service Connected:" + name.getClassName(), Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onServiceDisconnected(ComponentName name) {
-
+                    Log.d(TAG_SERVICE, "Service DisConnected:" + name.getClassName());
+                    Toast.makeText(ServiceLifeCycleActivity.this, "Service DisConnected:" + name.getClassName(), Toast.LENGTH_SHORT).show();
                 }
             }, Service.BIND_AUTO_CREATE);
         } else if (id == R.id.btn_unbind_service) {
             if (mCon == null) {
-                Log.d(TagLog.TAG_SERVICE, "Service not registered");
+                Toast.makeText(ServiceLifeCycleActivity.this, "Service not registered", Toast.LENGTH_SHORT).show();
+                Log.d(TAG_SERVICE, "Service not registered");
             } else {
+                Toast.makeText(ServiceLifeCycleActivity.this, "准备Service 解除绑定", Toast.LENGTH_SHORT).show();
+                Log.d(TAG_SERVICE, "准备Service 解除绑定");
                 unbindService(mCon);
                 mCon = null;
             }
         }
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(TagLog.TAG, getClass().getSimpleName() + " onPause");
-    }
 }

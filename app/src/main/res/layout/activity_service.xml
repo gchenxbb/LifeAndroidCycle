@@ -3,50 +3,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="30dp">
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/btn_start_service"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
-        android:background="#f4f4f4"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#f4f4c4"
         android:gravity="center"
         android:text="启动Service"
-        android:textColor="#333333"
         android:textSize="12sp" />
 
     <TextView
         android:id="@+id/btn_stop_service"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
-        android:background="#f4f4f4"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#f4f4c4"
         android:gravity="center"
         android:text="停止Service"
-        android:textColor="#333333"
         android:textSize="12sp" />
 
     <TextView
         android:id="@+id/btn_bind_service"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
-        android:background="#f4f4f4"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#f4f4c4"
         android:gravity="center"
         android:text="绑定Service"
-        android:textColor="#333333"
         android:textSize="12sp" />
 
     <TextView
         android:id="@+id/btn_unbind_service"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
-        android:background="#f4f4f4"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="#f4f4c4"
         android:gravity="center"
         android:text="解除绑定Service"
-        android:textColor="#333333"
         android:textSize="12sp" />
 
 </LinearLayout>

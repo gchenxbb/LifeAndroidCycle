@@ -9,7 +9,7 @@ import android.widget.Toast;
  * singleTask with taskAffinity
  */
 public class TaskAffinity1Activity extends BaseActivity {
-    public static final String TAG = "ETaskAffinityActivity";
+    public static final String TAG = "TaskAffinity1Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

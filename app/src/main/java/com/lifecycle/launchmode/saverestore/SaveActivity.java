@@ -7,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import com.lifecycle.launchmode.TagLog;
 import com.lifecycle.launchmode.R;
 
 import java.util.ArrayList;
@@ -17,6 +16,7 @@ import java.util.List;
 //异常销毁时，顺序:onPause->onSaveInstanceState->onStop->onDestroy
 //重建启动时，顺序:onCreate->onStart->onRestoreInstanceState->onResume
 public class SaveActivity extends Activity {
+    private String TAG = "ActivitySaveLifeCycle";
     RecycleViewAdapter mRecycleViewAdapter;
     private RecyclerView mRecyvleView;
     List<String> mList = new ArrayList<>();
@@ -24,7 +24,7 @@ public class SaveActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TagLog.TAG, getClass().getSimpleName() + " onCreate");
+        Log.d(TAG, getClass().getSimpleName() + " onCreate");
         setContentView(R.layout.activity_save);
         initView();
     }
@@ -63,51 +63,51 @@ public class SaveActivity extends Activity {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);//savedInstanceStatet一定存在
-        Log.d(TagLog.TAG, getClass().getSimpleName() + " onRestoreInstanceState " + savedInstanceState.getString("savedTest"));
+        Log.d(TAG, getClass().getSimpleName() + " onRestoreInstanceState " + savedInstanceState.getString("savedTest"));
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString("savedTest", "savedText");
-        Log.d(TagLog.TAG, getClass().getSimpleName() + " onSaveInstanceState");
+        Log.d(TAG, getClass().getSimpleName() + " onSaveInstanceState");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TagLog.TAG, getClass().getSimpleName() + " onResume");
+        Log.d(TAG, getClass().getSimpleName() + " onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TagLog.TAG, getClass().getSimpleName() + " onPause");
+        Log.d(TAG, getClass().getSimpleName() + " onPause");
     }
 
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TagLog.TAG, getClass().getSimpleName() + " onStart");
+        Log.d(TAG, getClass().getSimpleName() + " onStart");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TagLog.TAG, getClass().getSimpleName() + " onRestart");
+        Log.d(TAG, getClass().getSimpleName() + " onRestart");
     }
 
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TagLog.TAG, getClass().getSimpleName() + " onStop");
+        Log.d(TAG, getClass().getSimpleName() + " onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TagLog.TAG, getClass().getSimpleName() + " onDestroy");
+        Log.d(TAG, getClass().getSimpleName() + " onDestroy");
     }
 }

@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.lifecycle.launchmode.life.AActivity;
 import com.lifecycle.launchmode.saverestore.SaveActivity;
-import com.lifecycle.launchmode.service.ServiceActivity;
+import com.lifecycle.launchmode.service.ServiceLifeCycleActivity;
 import com.lifecycle.launchmode.mode.LaunchModeActivity;
 import com.lifecycle.launchmode.startup.StartupOneAct;
 
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (id == R.id.btn_life_a) {
             startActivity(new Intent(MainActivity.this, AActivity.class));
         } else if (id == R.id.btn_life_s) {
-            startActivity(new Intent(MainActivity.this, ServiceActivity.class));
+            startActivity(new Intent(MainActivity.this, ServiceLifeCycleActivity.class));
         } else if (id == R.id.btn_startup_ams) {
             startActivity(new Intent(MainActivity.this, StartupOneAct.class));
         } else if (id == R.id.btn_life_save) {
