@@ -1,5 +1,7 @@
 package com.lifecycle.launchmode.service;
 
+import android.app.Activity;
+import android.app.IntentService;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -12,11 +14,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lifecycle.launchmode.ICountAidlInterface;
 import com.lifecycle.launchmode.R;
 
 /**
  * 生命周期-Service
- *
+ * <p>
  * 当前现象是：绑定多次，解绑，不会调用onCreate，onBind，unBind和onDestory
  */
 public class ServiceLifeCycleActivity extends AppCompatActivity implements View.OnClickListener {
@@ -28,6 +31,8 @@ public class ServiceLifeCycleActivity extends AppCompatActivity implements View.
     private TextView mBtnBind;
     private TextView mBtnUnBind;
     ServiceConnection mCon;
+
+    ICountAidlInterface mStubService = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +69,13 @@ public class ServiceLifeCycleActivity extends AppCompatActivity implements View.
                 public void onServiceConnected(ComponentName name, IBinder service) {
                     //必须在onBind方法返回对象才会调用
                     Log.d(TAG_SERVICE, "Service Connected:" + name.getClassName());
-                    Toast.makeText(ServiceLifeCycleActivity.this, "Service Connected:" + name.getClassName(), Toast.LENGTH_SHORT).show();
+                    mStubService = (ICountAidlInterface) service;
+                    try{
+                        int count =  mStubService.getCount();
+                        Log.d(TAG_SERVICE, "Service Connected Count:" + count);
+                    }catch (Exception e){
+                        Log.d(TAG_SERVICE, "Service Connect Remote Exception" + name.getClassName());
+                    }
                 }
 
                 @Override
@@ -85,5 +96,19 @@ public class ServiceLifeCycleActivity extends AppCompatActivity implements View.
             }
         }
     }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mCon == null) {
+            Log.d(TAG_SERVICE, "Service not registered");
+        } else {
+            Log.d(TAG_SERVICE, "准备Service 解除绑定");
+            unbindService(mCon);
+            mCon = null;
+        }
+    }
+
 
 }

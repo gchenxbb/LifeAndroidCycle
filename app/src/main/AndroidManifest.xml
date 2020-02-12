@@ -80,6 +80,19 @@
         <service
             android:name="com.lifecycle.launchmode.service.LifeCycleService"
             android:enabled="true" />
+
+        <!-- 广播 静态注册-->
+        <receiver android:name=".receiver.AlReceiver">
+            <intent-filter>
+                <action android:name="com.pachen.cool.service.AL_ACTION" />
+            </intent-filter>
+        </receiver>
+        <!-- provider -->
+        <provider
+            android:name=".provider.LifeCycleContentProvider"
+            android:authorities="com.lm.LifeCycleContentProvider"
+            android:exported="true"
+            android:permission="com.pachen.cool.provider.FirewallManagerProvider" />
     </application>
 
 </manifest>

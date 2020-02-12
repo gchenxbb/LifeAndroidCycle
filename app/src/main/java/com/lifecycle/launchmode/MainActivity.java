@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.lifecycle.launchmode.life.AActivity;
+import com.lifecycle.launchmode.receiver.AlReceiver;
 import com.lifecycle.launchmode.saverestore.SaveActivity;
 import com.lifecycle.launchmode.service.ServiceLifeCycleActivity;
 import com.lifecycle.launchmode.mode.LaunchModeActivity;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView mBtnLifeS;
     private TextView mBtnLaunch;
     private TextView mBtnStartUp;
+    private TextView mBtnSendReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +37,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnLifeS = findViewById(R.id.btn_life_s);
         mBtnStartUp = findViewById(R.id.btn_startup_ams);
         mBtnSave = findViewById(R.id.btn_life_save);
+        mBtnSendReceiver = findViewById(R.id.btn_receiver_send);
 
         mBtnSave.setOnClickListener(this);
         mBtnLaunch.setOnClickListener(this);
         mBtnLifeA.setOnClickListener(this);
         mBtnLifeS.setOnClickListener(this);
         mBtnStartUp.setOnClickListener(this);
+        mBtnSendReceiver.setOnClickListener(this);
     }
 
     @Override
@@ -56,6 +60,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(MainActivity.this, StartupOneAct.class));
         } else if (id == R.id.btn_life_save) {
             startActivity(new Intent(MainActivity.this, SaveActivity.class));
+        } else if (id == R.id.btn_receiver_send) {
+            Intent intent = new Intent(MainActivity.this, AlReceiver.class);
+            intent.setAction("com.pachen.cool.service.AL_ACTION");
+            sendBroadcast(intent);
         }
     }
 

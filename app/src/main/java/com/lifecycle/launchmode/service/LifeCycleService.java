@@ -3,8 +3,11 @@ package com.lifecycle.launchmode.service;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.lifecycle.launchmode.ICountAidlInterface;
 
 /**
  * 在Activity中绑定该service时会调OnBind方法，将IBinder返回
@@ -18,6 +21,8 @@ public class LifeCycleService extends Service {
     private final static String TAG_SERVICE = "ServiceLifeCycle";
     private String className = getClass().getSimpleName();
 
+    private int mCount = 10;
+
     public LifeCycleService() {
         Log.d(TAG_SERVICE, className + " LifeCycleService 构造方法");
     }
@@ -25,8 +30,8 @@ public class LifeCycleService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         Log.d(TAG_SERVICE, className + " onBind");
-        Toast.makeText(LifeCycleService.this, className + " onBind", Toast.LENGTH_SHORT).show();
-        return null;
+        Toast.makeText(LifeCycleService.this, className + " onBind = " + mBinder.toString(), Toast.LENGTH_SHORT).show();
+        return mBinder;
     }
 
     @Override
@@ -56,4 +61,13 @@ public class LifeCycleService extends Service {
         Toast.makeText(LifeCycleService.this, className + " onStartCommand", Toast.LENGTH_SHORT).show();
         return super.onStartCommand(intent, flags, startId);
     }
+
+    private ICountAidlInterface.Stub mBinder = new ICountAidlInterface.Stub() {
+
+        @Override
+        public int getCount() throws RemoteException {
+            return mCount;
+        }
+    };
+
 }
