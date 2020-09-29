@@ -112,10 +112,28 @@
             android:textSize="10sp" />
 
         <TextView
+            android:id="@+id/singleTask_code"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#a4f4f4"
+            android:gravity="center"
+            android:text="singleTask" />
+
+        <TextView
+            android:id="@+id/singleTask_code_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="FLAG_ACTIVITY_NEW_TASK"
+            android:textColor="#353535"
+            android:textSize="10sp" />
+
+
+        <TextView
             android:id="@+id/other_process_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50dp"
             android:background="#f4f4f4"
             android:gravity="center"
             android:text="以下是打开其他进程app"

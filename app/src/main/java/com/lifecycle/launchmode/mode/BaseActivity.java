@@ -21,6 +21,8 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     protected TextView mTvSingleTaskAffinity1;
     protected TextView mTvSingleTaskAffinity2;
 
+    protected TextView mTvSingleTaskCode;
+
     protected TextView mTvOtherProcess1;
     protected TextView mTvOtherProcess2;
     protected TextView mTvOtherProcess3;
@@ -60,6 +62,12 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(BaseActivity.this, TaskAffinity1Activity.class));
         } else if (v == mTvSingleTaskAffinity2) {
             startActivity(new Intent(BaseActivity.this, TaskAffinity2Activity.class));
+        } else if (v == mTvSingleTaskCode) {
+//            1.在Activity上下文之外启动Activity需要给Intent设置FLAG_ACTIVITY_NEW_TASK标志，不然会报异常。
+//            2.加了该标志，如果在同一个应用中进行Activity跳转，不会创建新的Task，只有在不同的应用中跳转才会创建新的Task
+            Intent intent = new Intent(BaseActivity.this, SingleTaskActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         } else if (v == mTvOtherProcess1) {
             try {
                 Intent intent = new Intent();
@@ -119,6 +127,8 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         mTvSingleTaskAffinity1 = findViewById(R.id.singleTask_taskAffinity1);
         mTvSingleTaskAffinity2 = findViewById(R.id.singleTask_taskAffinity2);
 
+        mTvSingleTaskCode = findViewById(R.id.singleTask_code);
+
         mTvOtherProcess1 = findViewById(R.id.other_process1);
         mTvOtherProcess2 = findViewById(R.id.other_process2);
         mTvOtherProcess3 = findViewById(R.id.other_process3);
@@ -134,6 +144,9 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         mTvSingleInstance.setOnClickListener(this);
         mTvSingleTaskAffinity1.setOnClickListener(this);
         mTvSingleTaskAffinity2.setOnClickListener(this);
+
+        mTvSingleTaskCode.setOnClickListener(this);
+
         mTvOtherProcess1.setOnClickListener(this);
         mTvOtherProcess2.setOnClickListener(this);
         mTvOtherProcess3.setOnClickListener(this);
