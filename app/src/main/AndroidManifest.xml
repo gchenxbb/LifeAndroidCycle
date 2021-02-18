@@ -124,6 +124,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="com.ui.fragment.MainFragmentActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
     </application>
 
 </manifest>
