@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.intent.filter.IntentMainActivity;
 import com.lifecycle.launchmode.life.AActivity;
 import com.lifecycle.launchmode.receiver.AlReceiver;
 import com.lifecycle.launchmode.saverestore.SaveActivity;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView mBtnLaunch;
     private TextView mBtnStartUp;
     private TextView mBtnSendReceiver;
+    private TextView mBtnIntentFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnStartUp = findViewById(R.id.btn_startup_ams);
         mBtnSave = findViewById(R.id.btn_life_save);
         mBtnSendReceiver = findViewById(R.id.btn_receiver_send);
+        mBtnIntentFilter = findViewById(R.id.btn_intent_filter);
 
         mBtnSave.setOnClickListener(this);
         mBtnLaunch.setOnClickListener(this);
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnLifeS.setOnClickListener(this);
         mBtnStartUp.setOnClickListener(this);
         mBtnSendReceiver.setOnClickListener(this);
+        mBtnIntentFilter.setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, AlReceiver.class);
             intent.setAction("com.pachen.cool.service.AL_ACTION");
             sendBroadcast(intent);
+        } else if (id == R.id.btn_intent_filter) {
+            startActivity(new Intent(MainActivity.this, IntentMainActivity.class));
+
         }
     }
 

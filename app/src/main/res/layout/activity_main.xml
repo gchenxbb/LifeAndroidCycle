@@ -74,4 +74,14 @@
         android:text="ContentProvider"
         android:textSize="12sp" />
 
+
+    <TextView
+        android:id="@+id/btn_intent_filter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="#14c494"
+        android:gravity="center"
+        android:text="IntentFilter"
+        android:textSize="12sp" />
 </LinearLayout>

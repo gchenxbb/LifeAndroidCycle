@@ -93,6 +93,37 @@
             android:authorities="com.lm.LifeCycleContentProvider"
             android:exported="true"
             android:permission="com.pachen.cool.provider.FirewallManagerProvider" />
+
+        <!-- IntentFilter-->
+        <activity android:name="com.intent.filter.IntentMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.intent.filter.FtActivityCategory">
+            <intent-filter>
+                <action android:name="com.intent.intentfilter.action.four" />
+
+                <category android:name="com.intent.intentfilter.category" />
+                <category android:name="com.intent.intentfilter.category.one" />
+                <category android:name="com.intent.intentfilter.category.two" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.intent.filter.FtActivityData">
+            <intent-filter>
+                <action android:name="com.intent.intentfilter.action.five" />
+
+                <category android:name="com.intent.intentfilter.category.five" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!--可不配置URI,默认支持content-->
+                <data android:mimeType="image/*" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
