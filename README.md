@@ -37,3 +37,40 @@ Intentfilter中带有URI和mimeType，匹配时，intent中要设置URI和mimeTy
 
 
 
+#ipc
+Android对单个进程使用内存做了限制，多进程可以获取多分内存空间。
+在一个应用中使用多进程，在四大组件的AndroidMenifest添加android :process属性。
+或者在JNI的native层fork一个新进程。
+
+默认进程名是包名，在android:process属性中可设置新进程名字。
+以：开头的进程是当前应用私有进程，其他应用组件不能进入此进程。
+不以：开头的进程是全局进程，其他应用可通过ShareUID的方式 和他在一个进程中。
+
+每个应用分配一个UID，相同UID的应用可共享数据。通过shareUID的方式使得两个应用进入同一个进程是由要求的，需要应用的shareUID相同且签名相同，才可互访私有数据。Data目录，组件信息以及内存数据。
+
+多进程组件之间，凡是需要通过内存共享数据的，都会失败。
+主要影响比如
+静态成员和单例，线程同步机制，SharedPreferences可靠性下降，Application多次创建等。
+内存区不同，无法保证线程同步，锁的对象也不是一个。SharedPreferences不支持两个进程同时写操作，SharedPreferences底层利用xml文件读写实现，并发有问题。
+
+运行在同一个进程的组件属于同一个虚拟机，Application仅创建一次，不同进程时，会再次创建一个Application。
+
+不同进程组件拥有独立的虚拟机，Application和内存空间。
+
+实现跨进程通信
+Serializable和Parcelable实现对象序列化
+
+Serializable序列化接口，序列化的变量仅限于对象变量，而不是类变量
+实现序列化，需要实现Serializable接口，并声明一个serialVersionUID（仅对反序列化有影响）
+不仅仅是文件，网络也需要序列化，java对象转换成json字符串的过程也是序列化过程，serialVersionUID对序列化与反序列化有用，serialVersionUID被写入序列化中的数据中，文件或网络，反序列时，系统会检测文件的该值，只有与反序列化类的serialVersionUID一样，才能正常的反序列化。
+
+若不手动指定serialVersionUID值，反序列化时，当前类变量增加或删除（版本升级时），系统会自动根据当前类的内容计算serialVersionUID，肯定与序列化计算的数据的值不同，导致序列化失败而崩溃。因此，指定该值，可以避免反序列化的失败。
+
+Parcelable
+对象实现该接口就能在Intent之间进行传递。
+
+两个接口都能实现对象的序列化，并在Intent间传递数据。
+Serializable是Java的序列化接口，用法简单，开销较大，在序列化与反序列化过程中有大量的IO操作。
+Parcelable是Android平台的序列化接口，使用麻烦，效率较高。Android平台推荐。主要用在对象内存序列化上，在进程间传输。序列化到文件或网络还是用Serializable较好。
+
+

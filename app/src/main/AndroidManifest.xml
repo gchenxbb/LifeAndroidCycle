@@ -3,6 +3,7 @@
     package="com.lifecycle.launchmode">
 
     <application
+        android:name="com.pa.chen.appipc.IPCApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -96,10 +97,7 @@
 
         <!-- IntentFilter-->
         <activity android:name="com.intent.filter.IntentMainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name="com.intent.filter.FtActivityCategory">
             <intent-filter>
@@ -129,6 +127,25 @@
             android:screenOrientation="portrait">
 
         </activity>
+
+
+        <!-- IPC-->
+        <activity android:name="com.pa.chen.appipc.activity.MainActivity">
+        </activity>
+        <activity android:name="com.pa.chen.appipc.activity.SecActivity" />
+
+
+        <activity
+            android:name="com.pa.chen.appipc.activity.IPCActivity"
+            android:process=":ipc_remote" />
+
+        <service
+            android:name="com.pa.chen.appipc.service.CountService"
+            android:process=":ipc_service_remote" />
     </application>
+
+    <meta-data
+        android:name="android.max_aspect"
+        android:value="2.1" />
 
 </manifest>
