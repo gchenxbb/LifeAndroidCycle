@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.lifecycle.launchmode.R;
+import com.lifecycle.ponent.R;
 
 public class IntentMainActivity extends Activity {
     TextView mTextViewAction;

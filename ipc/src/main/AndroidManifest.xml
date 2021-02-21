@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.life.ipc">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        
+        <!-- IPC-->
+        <activity android:name=".activity.IPCMainActivity" />
+        <activity android:name=".activity.SecActivity" />
+        <activity
+            android:name=".activity.IPCActivity"
+            android:process=":ipc_remote" />
+
+        <service
+            android:name=".service.CountService"
+            android:process=":ipc_service_remote" />
+
+    </application>
+</manifest>

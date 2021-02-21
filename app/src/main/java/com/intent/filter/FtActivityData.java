@@ -4,7 +4,7 @@ package com.intent.filter;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.lifecycle.launchmode.R;
+import com.lifecycle.ponent.R;
 
 public class FtActivityData extends Activity {
 

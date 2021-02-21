@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import com.lifecycle.ponent.R;
 
-import com.lifecycle.launchmode.R;
-
+/**
+ * Main
+ */
 public class MainFragmentActivity extends AppCompatActivity {
     HomeFragment mHomeFragment;
     PageFragment mPageFragment;
@@ -78,6 +80,7 @@ public class MainFragmentActivity extends AppCompatActivity {
 
     /**
      * replace
+     *
      * @param container
      * @param targetFragment
      */
@@ -89,7 +92,7 @@ public class MainFragmentActivity extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
 
         mCurrentFragment = targetFragment;
-        ft.replace(container,targetFragment).commitAllowingStateLoss();
+        ft.replace(container, targetFragment).commitAllowingStateLoss();
     }
 
 

@@ -2,14 +2,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="30dp">
 
     <TextView
-        android:id="@+id/tv_loading"
+        android:id="@+id/btn_ipc"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="40dp"
+        android:background="#14c4b4"
         android:gravity="center"
-        android:text="find"
-        android:textSize="24sp" />
+        android:text="IPC"
+        android:textSize="12sp" />
 
 </LinearLayout>

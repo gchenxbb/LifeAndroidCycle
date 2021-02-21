@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lifecycle.launchmode">
+    package="com.lifecycle.ponent">
 
     <application
-        android:name="com.pa.chen.appipc.IPCApplication"
+        android:name=".ComApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="com.lifecycle.launchmode.MainActivity"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <!--生命周期-->
         <activity android:name=".life.AActivity" />
@@ -38,48 +29,48 @@
 
         <!--standard-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.StandardActivity"
+            android:name=".mode.StandardActivity"
             android:screenOrientation="portrait" />
         <!--singleTop-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.SingleTopActivity"
+            android:name=".mode.SingleTopActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <!--singleTask-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.SingleTaskActivity"
+            android:name=".mode.SingleTaskActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <!--singleInstance-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.SingleInstanceActivity"
+            android:name=".mode.SingleInstanceActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait" />
         <!--singleTask with taskAffinity-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.TaskAffinity1Activity"
+            android:name=".mode.TaskAffinity1Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:taskAffinity="@string/task_affinity_task" /><!--taskAffinity是字符串，需要包含.字符，否则应用安装失败-->
         <!--singleTask with taskAffinity E和F在同一个栈中 E和F在同一个栈中-->
         <activity
-            android:name="com.lifecycle.launchmode.mode.TaskAffinity2Activity"
+            android:name=".mode.TaskAffinity2Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:taskAffinity="@string/task_affinity_task" />
 
         <!--Activity启动流程1-->
         <activity
-            android:name="com.lifecycle.launchmode.startup.StartupOneAct"
+            android:name=".startup.StartupOneAct"
             android:screenOrientation="portrait" />
         <!--Activity启动流程2-->
         <activity
-            android:name="com.lifecycle.launchmode.startup.StartupTwoAct"
+            android:name=".startup.StartupTwoAct"
             android:screenOrientation="portrait" />
 
         <!--service启动流程-->
         <service
-            android:name="com.lifecycle.launchmode.service.LifeCycleService"
+            android:name=".service.LifeCycleService"
             android:enabled="true" />
 
         <!-- 广播 静态注册-->
@@ -122,19 +113,20 @@
             </intent-filter>
         </activity>
 
+        <!-- fragment-->
         <activity
             android:name="com.ui.fragment.MainFragmentActivity"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
 
         <!-- IPC-->
-        <activity android:name="com.pa.chen.appipc.activity.MainActivity">
-        </activity>
+        <activity android:name="com.pa.chen.appipc.activity.IPCMainActivity" />
         <activity android:name="com.pa.chen.appipc.activity.SecActivity" />
-
-
         <activity
             android:name="com.pa.chen.appipc.activity.IPCActivity"
             android:process=":ipc_remote" />
@@ -142,6 +134,7 @@
         <service
             android:name="com.pa.chen.appipc.service.CountService"
             android:process=":ipc_service_remote" />
+
     </application>
 
     <meta-data

@@ -2,14 +2,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="30dp">
 
     <TextView
-        android:id="@+id/tv_loading"
+        android:id="@+id/btn_life_a"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="40dp"
+        android:background="#14c4b4"
         android:gravity="center"
-        android:text="home"
-        android:textSize="24sp" />
+        android:text="生命周期_activity"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/btn_launch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        android:background="#14c4c4"
+        android:gravity="center"
+        android:text="启动模式"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/btn_life_s"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="#14c4c4"
+        android:gravity="center"
+        android:text="生命周期_service"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/btn_life_save"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="#14c4e4"
+        android:gravity="center"
+        android:text="保存状态"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/btn_startup_ams"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="#14c4f4"
+        android:gravity="center"
+        android:text="Activity启动流程分析"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/btn_receiver_send"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="#14c4a4"
+        android:gravity="center"
+        android:text="发送广播"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/btn_content_provider"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="#14c494"
+        android:gravity="center"
+        android:text="ContentProvider"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/btn_intent_filter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="#14c494"
+        android:gravity="center"
+        android:text="IntentFilter"
+        android:textSize="12sp" />
 
 </LinearLayout>
