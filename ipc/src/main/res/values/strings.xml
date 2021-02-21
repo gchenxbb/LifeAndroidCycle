@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Android 组件</string>
+    <string name="app_name_title">生命周期和启动模式</string>
+    <string name="task_affinity_task">com.lifecycle.launchmode.task_affinity_task</string>
+
+    <string name="str_bottom_a">Home</string>
+    <string name="str_bottom_b">Page</string>
+    <string name="str_bottom_c">Find</string>
+    <string name="str_bottom_d">Mine</string>
+</resources>
+
