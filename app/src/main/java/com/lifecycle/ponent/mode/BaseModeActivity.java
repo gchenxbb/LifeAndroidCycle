@@ -12,7 +12,7 @@ import com.lifecycle.ponent.R;
 /**
  * 基类，启动模式中所有测试类都继承它。
  */
-public class BaseActivity extends AppCompatActivity implements View.OnClickListener {
+public class BaseModeActivity extends AppCompatActivity implements View.OnClickListener {
 
     protected TextView mTvStandard;
     protected TextView mTvSingleTop;
@@ -51,21 +51,21 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == mTvStandard) {
-            startActivity(new Intent(BaseActivity.this, StandardActivity.class));
+            startActivity(new Intent(BaseModeActivity.this, StandardActivity.class));
         } else if (v == mTvSingleTop) {
-            startActivity(new Intent(BaseActivity.this, SingleTopActivity.class));
+            startActivity(new Intent(BaseModeActivity.this, SingleTopActivity.class));
         } else if (v == mTvSingleTask) {
-            startActivity(new Intent(BaseActivity.this, SingleTaskActivity.class));
+            startActivity(new Intent(BaseModeActivity.this, SingleTaskActivity.class));
         } else if (v == mTvSingleInstance) {
-            startActivity(new Intent(BaseActivity.this, SingleInstanceActivity.class));
+            startActivity(new Intent(BaseModeActivity.this, SingleInstanceActivity.class));
         } else if (v == mTvSingleTaskAffinity1) {
-            startActivity(new Intent(BaseActivity.this, TaskAffinity1Activity.class));
+            startActivity(new Intent(BaseModeActivity.this, TaskAffinity1Activity.class));
         } else if (v == mTvSingleTaskAffinity2) {
-            startActivity(new Intent(BaseActivity.this, TaskAffinity2Activity.class));
+            startActivity(new Intent(BaseModeActivity.this, TaskAffinity2Activity.class));
         } else if (v == mTvSingleTaskCode) {
 //            1.在Activity上下文之外启动Activity需要给Intent设置FLAG_ACTIVITY_NEW_TASK标志，不然会报异常。
 //            2.加了该标志，如果在同一个应用中进行Activity跳转，不会创建新的Task，只有在不同的应用中跳转才会创建新的Task
-            Intent intent = new Intent(BaseActivity.this, SingleTaskActivity.class);
+            Intent intent = new Intent(BaseModeActivity.this, SingleTaskActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         } else if (v == mTvOtherProcess1) {
@@ -74,7 +74,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setAction("com.launchmode.app.activitya");
                 startActivity(intent);
             } catch (Exception e) {
-                Toast.makeText(BaseActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
+                Toast.makeText(BaseModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
             }
         } else if (v == mTvOtherProcess2) {
             try {
@@ -82,7 +82,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setAction("com.launchmode.app.activitya_atr");
                 startActivity(intent);
             } catch (Exception e) {
-                Toast.makeText(BaseActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
+                Toast.makeText(BaseModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
             }
         } else if (v == mTvOtherProcess3) {
             try {
@@ -90,7 +90,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setAction("com.launchmode.app.activityb");
                 startActivity(intent);
             } catch (Exception e) {
-                Toast.makeText(BaseActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
+                Toast.makeText(BaseModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
             }
         } else if (v == mTvOtherProcess4) {
             try {
@@ -98,7 +98,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setAction("com.launchmode.app.activityb_atr");
                 startActivity(intent);
             } catch (Exception e) {
-                Toast.makeText(BaseActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
+                Toast.makeText(BaseModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
             }
         } else if (v == mTvOtherProcess5) {
             try {
@@ -106,7 +106,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setAction("com.launchmode.app.activityc");
                 startActivity(intent);
             } catch (Exception e) {
-                Toast.makeText(BaseActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
+                Toast.makeText(BaseModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
             }
         } else if (v == mTvOtherProcess6) {
             try {
@@ -114,7 +114,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setAction("com.launchmode.app.activityc_af");
                 startActivity(intent);
             } catch (Exception e) {
-                Toast.makeText(BaseActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
+                Toast.makeText(BaseModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
             }
         }
     }

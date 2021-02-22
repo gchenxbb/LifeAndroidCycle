@@ -4,6 +4,8 @@ import android.app.Application;
 import android.os.Process;
 import android.util.Log;
 
+import com.life.ipc.Constants;
+
 /**
  * Application
  */

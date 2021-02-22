@@ -1,4 +1,4 @@
-package com.intent.filter;
+package com.lifecycle.ponent.intentfilter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.lifecycle.ponent.R;
 
-public class IntentMainActivity extends Activity {
+public class IntentActivity extends Activity {
     TextView mTextViewAction;
     TextView mTextViewCategory;
     TextView mTextViewData;

@@ -1,4 +1,4 @@
-package com.ui.fragment;
+package com.lifecycle.ponent.fragment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/**
+ * 基础 Fragment
+ */
 public abstract class BaseFragment extends Fragment {
     protected Activity mActivity;
     protected View mRootView;
@@ -60,7 +63,6 @@ public abstract class BaseFragment extends Fragment {
         Log.d(TAG, this.getClass().getSimpleName() + "-onResume");
     }
 
-    /*************/
     @Override
     public void onPause() {
         super.onPause();

@@ -5,7 +5,7 @@ import android.os.Bundle;
 /**
  * launch mode main
  */
-public class LaunchModeActivity extends BaseActivity {
+public class LaunchModeActivity extends BaseModeActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

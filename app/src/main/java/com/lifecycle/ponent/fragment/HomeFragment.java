@@ -1,4 +1,4 @@
-package com.ui.fragment;
+package com.lifecycle.ponent.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.intent.filter.IntentMainActivity;
+import com.lifecycle.ponent.intentfilter.IntentActivity;
 import com.lifecycle.ponent.R;
 import com.lifecycle.ponent.life.AActivity;
 import com.lifecycle.ponent.mode.LaunchModeActivity;
@@ -73,8 +73,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             intent.setAction("com.pachen.cool.service.AL_ACTION");
             mActivity.sendBroadcast(intent);
         } else if (id == R.id.btn_intent_filter) {
-            startActivity(new Intent(mActivity, IntentMainActivity.class));
-
+            startActivity(new Intent(mActivity, IntentActivity.class));
         }
     }
 

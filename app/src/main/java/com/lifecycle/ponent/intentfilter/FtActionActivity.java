@@ -1,11 +1,11 @@
-package com.intent.filter;
+package com.lifecycle.ponent.intentfilter;
 
 import android.app.Activity;
 import android.os.Bundle;
 
 import com.lifecycle.ponent.R;
 
-public class FtActivityAction extends Activity {
+public class FtActionActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

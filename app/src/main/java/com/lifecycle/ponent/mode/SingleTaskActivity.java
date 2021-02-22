@@ -8,7 +8,7 @@ import android.widget.Toast;
 /**
  * singleTask
  */
-public class SingleTaskActivity extends BaseActivity {
+public class SingleTaskActivity extends BaseModeActivity {
 
     public static final String TAG = "CActivity";
 

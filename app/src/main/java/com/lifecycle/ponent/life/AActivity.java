@@ -12,16 +12,18 @@ import com.lifecycle.ponent.R;
 /**
  * 生命周期-activity-a
  */
-public class AActivity extends AppCompatActivity {
-    private String TAG = "ActivityLifeCycle";
-    private String className = getClass().getSimpleName();
+public class AActivity extends BaseActivity {
     private TextView mBtnB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a);
-        Log.d(TAG, className + " onCreate");
+        initView();
+        ALog();
+    }
+
+    public void initView() {
         mBtnB = findViewById(R.id.btn_life_b);
         mBtnB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,37 +36,36 @@ public class AActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG, className + " onRestart");
+        ALog();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, className + " onStart");
+        ALog();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, className + " onResume");
+        ALog();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, className + " onPause");
+        ALog();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, className + " onStop");
+        ALog();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, className + " onDestroy");
+        ALog();
     }
-
 }

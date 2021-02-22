@@ -1,4 +1,4 @@
-package com.ui.fragment;
+package com.lifecycle.ponent.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;

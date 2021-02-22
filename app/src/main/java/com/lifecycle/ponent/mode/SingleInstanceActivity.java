@@ -5,7 +5,7 @@ import android.os.Bundle;
 /**
  * singleInstance
  */
-public class SingleInstanceActivity extends BaseActivity {
+public class SingleInstanceActivity extends BaseModeActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

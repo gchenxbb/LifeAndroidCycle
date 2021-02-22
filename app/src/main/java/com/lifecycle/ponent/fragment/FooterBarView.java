@@ -1,4 +1,4 @@
-package com.ui.fragment;
+package com.lifecycle.ponent.fragment;
 
 import android.content.Context;
 
@@ -13,13 +13,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.lifecycle.ponent.R;
 
 
 /**
  * 通用，切换tab栏
  */
-public class FooterViewMenu extends LinearLayout {
+public class FooterBarView extends LinearLayout {
     //菜单文案id
     private int[] itemStrsDef = {
             R.string.str_bottom_a,
@@ -55,15 +56,15 @@ public class FooterViewMenu extends LinearLayout {
     private int mCurrentItem = POSITION_INVALID;//记录当前所展示的item的位置索引
     private int mPreItem = POSITION_INVALID;//记录上一次所展示的item的位置索引
 
-    public FooterViewMenu(Context context) {
+    public FooterBarView(Context context) {
         this(context, null);
     }
 
-    public FooterViewMenu(Context context, @Nullable AttributeSet attrs) {
+    public FooterBarView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public FooterViewMenu(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public FooterBarView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initLayout(context);
     }
@@ -96,7 +97,7 @@ public class FooterViewMenu extends LinearLayout {
                 public void onClick(View v) {
                     showCurrentItem(position, count);
                     if (itemListener != null) {
-                        itemListener.onItemClickListener(FooterViewMenu.this.itemStrsDef[position]);
+                        itemListener.onItemClickListener(FooterBarView.this.itemStrsDef[position]);
                     }
                 }
             });
@@ -203,8 +204,6 @@ public class FooterViewMenu extends LinearLayout {
         public void setIconRes(@DrawableRes int drawableId) {
             ivMenuItem.setImageResource(drawableId);
         }
-
-
     }
 
 }

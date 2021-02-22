@@ -10,7 +10,7 @@ import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 
 import com.lifecycle.ponent.R;
-import com.ui.fragment.MainFragmentActivity;
+import com.lifecycle.ponent.MainActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -42,7 +42,7 @@ public class AlReceiver extends BroadcastReceiver {
         builder.setContentTitle(context.getString(R.string.app_name));
         builder.setAutoCancel(true);
         builder.setWhen(System.currentTimeMillis());
-        Intent backIntent = new Intent(context, MainFragmentActivity.class);
+        Intent backIntent = new Intent(context, MainActivity.class);
         backIntent.setPackage(context.getPackageName());
         backIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         PendingIntent contentIntent = PendingIntent.getActivity(

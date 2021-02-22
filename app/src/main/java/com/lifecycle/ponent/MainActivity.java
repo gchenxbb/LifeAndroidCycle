@@ -1,22 +1,28 @@
-package com.ui.fragment;
+package com.lifecycle.ponent;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import com.lifecycle.ponent.R;
+
+import com.lifecycle.ponent.fragment.BaseFragment;
+import com.lifecycle.ponent.fragment.FindFragment;
+import com.lifecycle.ponent.fragment.FooterBarView;
+import com.lifecycle.ponent.fragment.HomeFragment;
+import com.lifecycle.ponent.fragment.MineFragment;
+import com.lifecycle.ponent.fragment.PageFragment;
 
 /**
  * Main
  */
-public class MainFragmentActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     HomeFragment mHomeFragment;
     PageFragment mPageFragment;
     FindFragment mFindFragment;
     MineFragment mMineFragment;
 
     BaseFragment mCurrentFragment;
-    FooterViewMenu footerViewMenu;
+    FooterBarView footerBarView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +36,9 @@ public class MainFragmentActivity extends AppCompatActivity {
 
         switchFragment(R.id.fl_main_container, mHomeFragment);
 //        replaceFragment(R.id.fl_main_container, mHomeFragment);
-
-
-        footerViewMenu = findViewById(R.id.footer_view_menu);
-        footerViewMenu.setOnMenuItemListener(new FooterViewMenu.OnMenuItemListener() {
+        
+        footerBarView = findViewById(R.id.footer_view_menu);
+        footerBarView.setOnMenuItemListener(new FooterBarView.OnMenuItemListener() {
 
             @Override
             public void onItemClickListener(int itemStrId) {
@@ -61,6 +66,12 @@ public class MainFragmentActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * add hide
+     *
+     * @param container
+     * @param targetFragment
+     */
     public void switchFragment(int container, BaseFragment targetFragment) {
         if (mCurrentFragment == targetFragment || targetFragment == null) {
             return;

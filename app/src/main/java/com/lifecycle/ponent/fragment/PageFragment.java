@@ -1,4 +1,4 @@
-package com.ui.fragment;
+package com.lifecycle.ponent.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,18 +9,14 @@ import android.view.ViewGroup;
 
 import com.lifecycle.ponent.R;
 
-/**
- * 我的Fragment
- */
-public class MineFragment extends BaseFragment {
+public class PageFragment extends BaseFragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mRootView = inflater.inflate(R.layout.fragment_my, container, false);
-        super.onCreateView(inflater,container,savedInstanceState);
+        mRootView = inflater.inflate(R.layout.fragment_page, container, false);
+        super.onCreateView(inflater, container, savedInstanceState);
         return mRootView;
     }
 
 }
-

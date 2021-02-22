@@ -87,10 +87,14 @@
             android:permission="com.pachen.cool.provider.FirewallManagerProvider" />
 
         <!-- IntentFilter-->
-        <activity android:name="com.intent.filter.IntentMainActivity">
-
+        <activity android:name=".intentfilter.IntentActivity" />
+        <activity android:name=".intentfilter.FtActionActivity">
+            <intent-filter>
+                <action android:name="com.intent.intentfilter.action.one" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
-        <activity android:name="com.intent.filter.FtActivityCategory">
+        <activity android:name=".intentfilter.FtCategoryActivity">
             <intent-filter>
                 <action android:name="com.intent.intentfilter.action.four" />
 
@@ -100,7 +104,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.intent.filter.FtActivityData">
+        <activity android:name=".intentfilter.FtDataActivity">
             <intent-filter>
                 <action android:name="com.intent.intentfilter.action.five" />
 
@@ -115,7 +119,7 @@
 
         <!-- fragment-->
         <activity
-            android:name="com.ui.fragment.MainFragmentActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -123,17 +127,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- IPC-->
-        <activity android:name="com.pa.chen.appipc.activity.IPCMainActivity" />
-        <activity android:name="com.pa.chen.appipc.activity.SecActivity" />
-        <activity
-            android:name="com.pa.chen.appipc.activity.IPCActivity"
-            android:process=":ipc_remote" />
-
-        <service
-            android:name="com.pa.chen.appipc.service.CountService"
-            android:process=":ipc_service_remote" />
 
     </application>
 

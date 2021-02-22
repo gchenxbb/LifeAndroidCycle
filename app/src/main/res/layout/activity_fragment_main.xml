@@ -10,7 +10,7 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <com.ui.fragment.FooterViewMenu
+    <com.lifecycle.ponent.fragment.FooterBarView
         android:id="@+id/footer_view_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
