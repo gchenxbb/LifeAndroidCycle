@@ -1,11 +1,11 @@
-package com.lifecycle.ponent.mode;
+package com.lifecycle.ponent.launchmode;
 
 import android.os.Bundle;
 
 /**
- * singleInstance
+ * launch mode main
  */
-public class SingleInstanceActivity extends BaseModeActivity {
+public class LaunchModeActivity extends BaseModeActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

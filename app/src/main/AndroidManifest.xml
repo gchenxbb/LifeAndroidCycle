@@ -24,37 +24,37 @@
         <!--   android:configChanges="orientation|screenSize" />-->
 
         <activity
-            android:name=".mode.LaunchModeActivity"
+            android:name=".launchmode.LaunchModeActivity"
             android:screenOrientation="portrait" />
 
         <!--standard-->
         <activity
-            android:name=".mode.StandardActivity"
+            android:name=".launchmode.StandardActivity"
             android:screenOrientation="portrait" />
         <!--singleTop-->
         <activity
-            android:name=".mode.SingleTopActivity"
+            android:name=".launchmode.SingleTopActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <!--singleTask-->
         <activity
-            android:name=".mode.SingleTaskActivity"
+            android:name=".launchmode.SingleTaskActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <!--singleInstance-->
         <activity
-            android:name=".mode.SingleInstanceActivity"
+            android:name=".launchmode.SingleInstanceActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait" />
         <!--singleTask with taskAffinity-->
         <activity
-            android:name=".mode.TaskAffinity1Activity"
+            android:name=".launchmode.TaskAffinity1Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:taskAffinity="@string/task_affinity_task" /><!--taskAffinity是字符串，需要包含.字符，否则应用安装失败-->
         <!--singleTask with taskAffinity E和F在同一个栈中 E和F在同一个栈中-->
         <activity
-            android:name=".mode.TaskAffinity2Activity"
+            android:name=".launchmode.TaskAffinity2Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:taskAffinity="@string/task_affinity_task" />

@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.lifecycle.ponent.intentfilter.IntentActivity;
 import com.lifecycle.ponent.R;
 import com.lifecycle.ponent.life.AActivity;
-import com.lifecycle.ponent.mode.LaunchModeActivity;
+import com.lifecycle.ponent.launchmode.LaunchModeActivity;
 import com.lifecycle.ponent.receiver.AlReceiver;
 import com.lifecycle.ponent.saverestore.SaveActivity;
 import com.lifecycle.ponent.service.ServiceLifeCycleActivity;

@@ -1,4 +1,4 @@
-package com.lifecycle.ponent.mode;
+package com.lifecycle.ponent.launchmode;
 
 import android.os.Bundle;
 import android.view.View;

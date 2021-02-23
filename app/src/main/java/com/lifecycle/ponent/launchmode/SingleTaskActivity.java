@@ -1,4 +1,4 @@
-package com.lifecycle.ponent.mode;
+package com.lifecycle.ponent.launchmode;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,10 +6,11 @@ import android.util.Log;
 import android.widget.Toast;
 
 /**
- * singleTask with taskAffinity
+ * singleTask
  */
-public class TaskAffinity2Activity extends BaseModeActivity {
-    public static final String TAG = "TaskAffinity2Activity";
+public class SingleTaskActivity extends BaseModeActivity {
+
+    public static final String TAG = "CActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,8 @@ public class TaskAffinity2Activity extends BaseModeActivity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         Log.d(TAG, "onNewIntent == > 调用");
-        Toast.makeText(TaskAffinity2Activity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
+        Toast.makeText(SingleTaskActivity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
     }
+
 }
 
