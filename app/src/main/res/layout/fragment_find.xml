@@ -9,7 +9,7 @@
         android:id="@+id/btn_ipc"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="#14c4b4"
+        android:background="#d4f4f4"
         android:gravity="center"
         android:text="IPC"
         android:textSize="12sp" />

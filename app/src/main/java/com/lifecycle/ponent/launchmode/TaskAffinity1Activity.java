@@ -8,7 +8,7 @@ import android.widget.Toast;
 /**
  * singleTask with taskAffinity
  */
-public class TaskAffinity1Activity extends BaseModeActivity {
+public class TaskAffinity1Activity extends LaunchModeActivity {
     public static final String TAG = "TaskAffinity1Activity";
 
     @Override

@@ -59,26 +59,18 @@
             android:screenOrientation="portrait"
             android:taskAffinity="@string/task_affinity_task" />
 
-        <!--Activity启动流程1-->
-        <activity
-            android:name=".startup.StartupOneAct"
-            android:screenOrientation="portrait" />
-        <!--Activity启动流程2-->
-        <activity
-            android:name=".startup.StartupTwoAct"
-            android:screenOrientation="portrait" />
-
         <!--service启动流程-->
         <service
             android:name=".service.LifeCycleService"
             android:enabled="true" />
 
-        <!-- 广播 静态注册-->
+        <!-- broadcast 广播 静态注册-->
         <receiver android:name=".receiver.AlReceiver">
             <intent-filter>
                 <action android:name="com.pachen.cool.service.AL_ACTION" />
             </intent-filter>
         </receiver>
+
         <!-- provider -->
         <provider
             android:name=".provider.LifeCycleContentProvider"
@@ -117,7 +109,7 @@
             </intent-filter>
         </activity>
 
-        <!-- fragment-->
+        <!-- fragment -->
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">

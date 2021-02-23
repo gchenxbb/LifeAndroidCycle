@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_sv"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -7,13 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/standard"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#a4f4f4"
+            android:background="#d4f4f4"
             android:gravity="center"
             android:text="standard" />
 
@@ -30,7 +31,7 @@
             android:id="@+id/singleTop"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#a4f4f4"
+            android:background="#d4f4f4"
             android:gravity="center"
             android:text="singleTop" />
 
@@ -47,7 +48,7 @@
             android:id="@+id/singleTask"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#a4f4f4"
+            android:background="#d4f4f4"
             android:gravity="center"
             android:text="singleTask" />
 
@@ -64,7 +65,7 @@
             android:id="@+id/singleInstance"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#a4f4f4"
+            android:background="#d4f4f4"
             android:gravity="center"
             android:text="singleInstance" />
 
@@ -115,7 +116,7 @@
             android:id="@+id/singleTask_code"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#a4f4f4"
+            android:background="#d4f4f4"
             android:gravity="center"
             android:text="singleTask" />
 
@@ -134,7 +135,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:background="#f4f4f4"
             android:gravity="center"
             android:text="以下是打开其他进程app"
             android:textColor="#353535"
@@ -144,7 +144,7 @@
             android:id="@+id/other_process1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#f4a4f4"
+            android:background="#d4f4f4"
             android:gravity="center"
             android:text="Other process1 standard " />
 
@@ -161,7 +161,7 @@
             android:id="@+id/other_process2"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#f4a4f4"
+            android:background="#d4f4f4"
             android:gravity="center"
             android:text="Other process2 standard + allowTaskReparenting" />
 
@@ -178,7 +178,7 @@
             android:id="@+id/other_process3"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#f4a4f4"
+            android:background="#d4f4f4"
             android:gravity="center"
             android:text="Other process3 singletop" />
 
@@ -195,7 +195,7 @@
             android:id="@+id/other_process4"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#f4a4f4"
+            android:background="#d4f4f4"
             android:gravity="center"
             android:text="Other process4 singleTop + allowTaskReparenting" />
 
@@ -212,7 +212,7 @@
             android:id="@+id/other_process5"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#f4a4f4"
+            android:background="#d4f4f4"
             android:gravity="center"
             android:text="Other process5 singleTask" />
 
@@ -229,7 +229,7 @@
             android:id="@+id/other_process6"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#f4a4f4"
+            android:background="#d4f4f4"
             android:gravity="center"
             android:text="Other process6 singleTask + taskAffinity" />
 
