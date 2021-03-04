@@ -1,69 +1,60 @@
 package com.lifecycle.ponent;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.lifecycle.ponent.fragment.BaseFragment;
+import com.lifecycle.ponent.fragment.BottomBarEntity;
 import com.lifecycle.ponent.fragment.FindFragment;
 import com.lifecycle.ponent.fragment.FooterBarView;
 import com.lifecycle.ponent.fragment.HomeFragment;
+import com.lifecycle.ponent.fragment.HomeVPAdapter;
 import com.lifecycle.ponent.fragment.MineFragment;
 import com.lifecycle.ponent.fragment.PageFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Main
  */
 public class MainActivity extends AppCompatActivity {
-    HomeFragment mHomeFragment;
-    PageFragment mPageFragment;
-    FindFragment mFindFragment;
-    MineFragment mMineFragment;
-
     BaseFragment mCurrentFragment;
     FooterBarView footerBarView;
+
+    ViewPager viewPager;
+    FragmentPagerAdapter fragmentPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_main);
 
-        mHomeFragment = new HomeFragment();
-        mPageFragment = new PageFragment();
-        mFindFragment = new FindFragment();
-        mMineFragment = new MineFragment();
+        viewPager = findViewById(R.id.vp_main);
 
-        switchFragment(R.id.fl_main_container, mHomeFragment);
-//        replaceFragment(R.id.fl_main_container, mHomeFragment);
-        
+        List<Fragment> fragmentList = new ArrayList<>();
+        fragmentList.add(new HomeFragment());
+        fragmentList.add(new PageFragment());
+        fragmentList.add(new FindFragment());
+        fragmentList.add(new MineFragment());
+
+        fragmentPagerAdapter = new HomeVPAdapter(getSupportFragmentManager(), fragmentList);
+        viewPager.setAdapter(fragmentPagerAdapter);
+
         footerBarView = findViewById(R.id.footer_view_menu);
         footerBarView.setOnMenuItemListener(new FooterBarView.OnMenuItemListener() {
-
             @Override
-            public void onItemClickListener(int itemStrId) {
-                switch (itemStrId) {
-                    case R.string.str_bottom_a:
-                        switchFragment(R.id.fl_main_container, mHomeFragment);
-//                        replaceFragment(R.id.fl_main_container, mHomeFragment);
-                        break;
-                    case R.string.str_bottom_b:
-                        switchFragment(R.id.fl_main_container, mPageFragment);
-//                        replaceFragment(R.id.fl_main_container, mPageFragment);
-                        break;
-                    case R.string.str_bottom_c:
-                        switchFragment(R.id.fl_main_container, mFindFragment);
-//                        replaceFragment(R.id.fl_main_container, mFindFragment);
-                        break;
-                    case R.string.str_bottom_d:
-                        switchFragment(R.id.fl_main_container, mMineFragment);
-//                        replaceFragment(R.id.fl_main_container, mMineFragment);
-                        break;
-                    default:
-                        break;
-                }
+            public void onItemClickListener(BottomBarEntity entity) {
+                viewPager.setCurrentItem(entity.index, false);
             }
         });
+
+        viewPager.setOffscreenPageLimit(1);
     }
 
     /**
@@ -105,6 +96,4 @@ public class MainActivity extends AppCompatActivity {
         mCurrentFragment = targetFragment;
         ft.replace(container, targetFragment).commitAllowingStateLoss();
     }
-
-
 }

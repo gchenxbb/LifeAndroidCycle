@@ -10,6 +10,9 @@ import com.life.ipc.Constants;
  * Application
  */
 public class ComApplication extends Application {
+    public final String TAG = getClass().getSimpleName();
+
+
     public ComApplication() {
         super();
     }
@@ -18,7 +21,7 @@ public class ComApplication extends Application {
     public void onCreate() {
         super.onCreate();
         //观察打印多个进程创建 ComApplication 并触发 onCreate() 方法
-        Log.d(Constants.TAG, getClass().getSimpleName() + ":onCreate!," + Process.myPid());
+        Log.d(Constants.TAG, TAG + ":onCreate!," + Process.myPid());
     }
 
     @Override

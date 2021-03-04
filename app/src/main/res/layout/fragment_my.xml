@@ -1,15 +1,113 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f4f4f4"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_loading"
+        android:id="@+id/btn_life_a"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/px100"
+        android:background="@drawable/selector_common_bg_press"
+        android:clickable="true"
+        android:drawableEnd="@drawable/iv_arrow_right"
+        android:focusable="true"
         android:gravity="center"
-        android:text="mine"
-        android:textSize="24sp" />
+        android:padding="@dimen/px20"
+        android:text="生命周期_activity"
+        android:textSize="@dimen/common_text_size_32px" />
+
+    <View style="@style/line_horizontal" />
+
+    <TextView
+        android:id="@+id/btn_launch_mode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100"
+        android:background="@drawable/selector_common_bg_press"
+        android:clickable="true"
+        android:drawableEnd="@drawable/iv_arrow_right"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="@dimen/px20"
+        android:text="启动模式"
+        android:textSize="@dimen/common_text_size_32px" />
+
+
+    <View style="@style/line_horizontal" />
+
+
+    <TextView
+        android:id="@+id/btn_life_s"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100"
+        android:background="@drawable/selector_common_bg_press"
+        android:clickable="true"
+        android:drawableEnd="@drawable/iv_arrow_right"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="@dimen/px20"
+        android:text="生命周期_service"
+        android:textSize="@dimen/common_text_size_32px" />
+
+    <View style="@style/line_horizontal" />
+
+    <TextView
+        android:id="@+id/btn_receiver_send"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100"
+        android:background="@drawable/selector_common_bg_press"
+        android:clickable="true"
+        android:drawableEnd="@drawable/iv_arrow_right"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="@dimen/px20"
+        android:text="发送广播"
+        android:textSize="@dimen/common_text_size_32px" />
+
+    <View style="@style/line_horizontal" />
+
+    <TextView
+        android:id="@+id/btn_content_provider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100"
+        android:background="@drawable/selector_common_bg_press"
+        android:clickable="true"
+        android:drawableEnd="@drawable/iv_arrow_right"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="@dimen/px20"
+        android:text="ContentProvider"
+        android:textSize="@dimen/common_text_size_32px" />
+
+    <View style="@style/line_horizontal" />
+
+    <TextView
+        android:id="@+id/btn_intent_filter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100"
+        android:background="@drawable/selector_common_bg_press"
+        android:clickable="true"
+        android:drawableEnd="@drawable/iv_arrow_right"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="@dimen/px20"
+        android:text="IntentFilter"
+        android:textSize="@dimen/common_text_size_32px" />
+
+    <View style="@style/line_horizontal" />
+
+    <TextView
+        android:id="@+id/btn_life_save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100"
+        android:background="@drawable/selector_common_bg_press"
+        android:clickable="true"
+        android:drawableEnd="@drawable/iv_arrow_right"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="@dimen/px20"
+        android:text="保存状态"
+        android:textSize="@dimen/common_text_size_32px" />
 
 </LinearLayout>

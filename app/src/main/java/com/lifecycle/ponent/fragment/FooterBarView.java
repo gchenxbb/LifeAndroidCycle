@@ -16,19 +16,21 @@ import android.widget.TextView;
 
 import com.lifecycle.ponent.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * 通用，切换tab栏
  */
 public class FooterBarView extends LinearLayout {
     //菜单文案id
-    private int[] itemStrsDef = {
-            R.string.str_bottom_a,
-            R.string.str_bottom_b,
-            R.string.str_bottom_c,
-            R.string.str_bottom_d,
+    private String[] itemStrsDef = {
+            "home",
+            "page",
+            "find",
+            "mine",
     };
-
     //菜单的图标id(普通状态);
     private int[] itemIconNormalDef = {
             R.mipmap.ic_launcher,
@@ -36,7 +38,6 @@ public class FooterBarView extends LinearLayout {
             R.mipmap.ic_launcher,
             R.mipmap.ic_launcher,
     };
-
     //菜单的图标id(选中状态)
     private int[] itemIconSelectedDef = {
             R.mipmap.ic_launcher_round,
@@ -46,6 +47,7 @@ public class FooterBarView extends LinearLayout {
     };
 
     private FooterViewMenuItem[] itemViews;
+    private List<BottomBarEntity> bottomBarEntities;
 
     private OnMenuItemListener itemListener;
 
@@ -72,6 +74,18 @@ public class FooterBarView extends LinearLayout {
     private void initLayout(Context context) {
         setOrientation(HORIZONTAL);
         setBackgroundColor(context.getResources().getColor(R.color.white));
+
+        BottomBarEntity entity1 = new BottomBarEntity(0, itemIconNormalDef[0], itemIconSelectedDef[0], itemStrsDef[0]);
+        BottomBarEntity entity2 = new BottomBarEntity(1, itemIconNormalDef[1], itemIconSelectedDef[1], itemStrsDef[1]);
+        BottomBarEntity entity3 = new BottomBarEntity(2, itemIconNormalDef[2], itemIconSelectedDef[2], itemStrsDef[2]);
+        BottomBarEntity entity4 = new BottomBarEntity(3, itemIconNormalDef[3], itemIconSelectedDef[3], itemStrsDef[3]);
+
+        bottomBarEntities = new ArrayList<>();
+        bottomBarEntities.add(entity1);
+        bottomBarEntities.add(entity2);
+        bottomBarEntities.add(entity3);
+        bottomBarEntities.add(entity4);
+
         initFooterVews(true);
     }
 
@@ -84,20 +98,20 @@ public class FooterBarView extends LinearLayout {
         if (!defValue) {
             removeAllViews();
         }
-        final int count = itemStrsDef.length;
+        final int count = bottomBarEntities.size();
         itemViews = new FooterViewMenuItem[count];
         for (int i = 0; i < count; i++) {
             final int position = i;
             FooterViewMenuItem itemView = new FooterViewMenuItem(getContext());
-            itemView.setText(itemStrsDef[i]);
+            itemView.setText(bottomBarEntities.get(i).title);
 
             itemView.setOnClickListener(new OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
-                    showCurrentItem(position, count);
+                    showCurrentItem(position);
                     if (itemListener != null) {
-                        itemListener.onItemClickListener(FooterBarView.this.itemStrsDef[position]);
+                        itemListener.onItemClickListener(bottomBarEntities.get(position));
                     }
                 }
             });
@@ -106,26 +120,32 @@ public class FooterBarView extends LinearLayout {
         }
     }
 
-    private void showCurrentItem(int position, int count) {
+    private void showCurrentItem(int position) {
         if (mCurrentItem != position) {
             mPreItem = mCurrentItem;
             mCurrentItem = position;
 
-            itemViews[mCurrentItem].setTextColor(R.color.colorPrimary);
-            itemViews[mCurrentItem].setIconRes(this.itemIconSelectedDef[mCurrentItem]);
-
+            selectItem(position);
 
             if (mPreItem != POSITION_INVALID) {
-                itemViews[mPreItem].setTextColor(R.color.colorAccent);
-                itemViews[mPreItem].setIconRes(this.itemIconNormalDef[mPreItem]);
+                unSelectItem(mPreItem);
             }
         }
     }
 
+    public void selectItem(int position) {
+        itemViews[position].setTextColor(R.color.colorPrimary);
+        itemViews[position].setIconRes(this.bottomBarEntities.get(position).iconSelcet);
+    }
+
+    public void unSelectItem(int position) {
+        itemViews[position].setTextColor(R.color.colorAccent);
+        itemViews[position].setIconRes(this.bottomBarEntities.get(position).iconNormal);
+    }
+
     private void initAllItem(int count) {
         for (int i = 0; i < count; i++) {
-            itemViews[i].setTextColor(R.color.colorAccent);
-            itemViews[i].setIconRes(this.itemIconNormalDef[i]);
+            unSelectItem(i);
         }
     }
 
@@ -145,7 +165,7 @@ public class FooterBarView extends LinearLayout {
             //初始化Item现实内容
             initAllItem(itemViews.length);
             //初始化选中内容
-            showCurrentItem(POSITION_DEFAULT, itemViews.length);
+            showCurrentItem(POSITION_DEFAULT);
 
         }
     }
@@ -156,10 +176,8 @@ public class FooterBarView extends LinearLayout {
     public interface OnMenuItemListener {
         /**
          * 点击item
-         *
-         * @param itemStrId 当前菜单的标题id
          */
-        void onItemClickListener(int itemStrId);
+        void onItemClickListener(BottomBarEntity entity);
     }
 
     //内部Item类
@@ -192,8 +210,8 @@ public class FooterBarView extends LinearLayout {
             setLayoutParams(new LayoutParams(0, LayoutParams.WRAP_CONTENT, 1));
         }
 
-        public void setText(@StringRes int strId) {
-            tvMenuItem.setText(strId);
+        public void setText(String str) {
+            tvMenuItem.setText(str);
         }
 
         @SuppressWarnings("deprecation")
