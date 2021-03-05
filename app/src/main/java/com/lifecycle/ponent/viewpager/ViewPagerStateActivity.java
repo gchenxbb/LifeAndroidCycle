@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * standard
+ * FragmentStatePagerAdapter 和  FragmentPagerAdapter
  */
 public class ViewPagerStateActivity extends AppCompatActivity {
     private ViewPager viewPager;
