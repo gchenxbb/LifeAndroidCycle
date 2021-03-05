@@ -1,4 +1,4 @@
-package com.lifecycle.ponent.fragment;
+package com.lifecycle.ponent.homefragment;
 
 public class BottomBarEntity {
 

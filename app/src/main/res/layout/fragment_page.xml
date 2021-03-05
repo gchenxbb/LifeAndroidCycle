@@ -5,11 +5,12 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tv_loading"
+        android:id="@+id/btn_loading"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="#d4f4f4"
         android:gravity="center"
-        android:text="page"
-        android:textSize="24sp" />
-
+        android:text="ViewPager"
+        android:textSize="12sp" />
 </LinearLayout>

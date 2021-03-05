@@ -10,7 +10,7 @@ import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 
 import com.lifecycle.ponent.R;
-import com.lifecycle.ponent.MainActivity;
+import com.lifecycle.ponent.homefragment.MainActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

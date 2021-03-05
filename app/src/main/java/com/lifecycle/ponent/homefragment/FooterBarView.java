@@ -1,11 +1,10 @@
-package com.lifecycle.ponent.fragment;
+package com.lifecycle.ponent.homefragment;
 
 import android.content.Context;
 
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -18,7 +17,6 @@ import com.lifecycle.ponent.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 /**
  * 通用，切换tab栏

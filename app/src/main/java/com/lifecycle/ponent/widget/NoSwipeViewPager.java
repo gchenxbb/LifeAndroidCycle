@@ -1,4 +1,4 @@
-package com.lifecycle.ponent.fragment;
+package com.lifecycle.ponent.widget;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -7,6 +7,9 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
+/**
+ * 无手势 ViewPager
+ */
 public class NoSwipeViewPager extends ViewPager {
 
     public NoSwipeViewPager(@NonNull Context context) {

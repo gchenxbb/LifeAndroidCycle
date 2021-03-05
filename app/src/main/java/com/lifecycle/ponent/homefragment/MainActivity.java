@@ -1,4 +1,4 @@
-package com.lifecycle.ponent;
+package com.lifecycle.ponent.homefragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,14 +8,15 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
-import com.lifecycle.ponent.fragment.BaseFragment;
-import com.lifecycle.ponent.fragment.BottomBarEntity;
-import com.lifecycle.ponent.fragment.FindFragment;
-import com.lifecycle.ponent.fragment.FooterBarView;
-import com.lifecycle.ponent.fragment.HomeFragment;
-import com.lifecycle.ponent.fragment.HomeVPAdapter;
-import com.lifecycle.ponent.fragment.MineFragment;
-import com.lifecycle.ponent.fragment.PageFragment;
+import com.lifecycle.ponent.R;
+import com.lifecycle.ponent.homefragment.BaseFragment;
+import com.lifecycle.ponent.homefragment.BottomBarEntity;
+import com.lifecycle.ponent.homefragment.FindFragment;
+import com.lifecycle.ponent.homefragment.FooterBarView;
+import com.lifecycle.ponent.homefragment.HomeFragment;
+import com.lifecycle.ponent.homefragment.HomeVPAdapter;
+import com.lifecycle.ponent.homefragment.MineFragment;
+import com.lifecycle.ponent.homefragment.PageFragment;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.lifecycle.ponent.fragment;
+package com.lifecycle.ponent.homefragment;
 
 import android.content.Intent;
 import android.os.Bundle;
