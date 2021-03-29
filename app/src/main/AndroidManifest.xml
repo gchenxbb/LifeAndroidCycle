@@ -16,7 +16,8 @@
         <activity android:name=".service.ServiceLifeCycleActivity" />
 
         <!--保存状态-->
-        <activity android:name=".saverestore.SaveActivity" />
+        <activity android:name=".saverestore.SaveStateActivity" />
+        <activity android:name=".saverestore.SaveSecondActivity" />
 
         <!--     android:theme="@style/AppThemeTranslucent"  />-->
         <!--     当minSdkVersion和targetSdkVersion有一个大于13，配置,orientation和screenSize，旋转屏幕就不会重建Activity  />-->

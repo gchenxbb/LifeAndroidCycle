@@ -14,7 +14,7 @@ import com.lifecycle.ponent.intentfilter.IntentActivity;
 import com.lifecycle.ponent.launchmode.LaunchModeActivity;
 import com.lifecycle.ponent.life.AActivity;
 import com.lifecycle.ponent.receiver.AlReceiver;
-import com.lifecycle.ponent.saverestore.SaveActivity;
+import com.lifecycle.ponent.saverestore.SaveStateActivity;
 import com.lifecycle.ponent.service.ServiceLifeCycleActivity;
 
 /**
@@ -66,7 +66,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
         } else if (id == R.id.btn_life_s) {
             startActivity(new Intent(mActivity, ServiceLifeCycleActivity.class));
         } else if (id == R.id.btn_life_save) {
-            startActivity(new Intent(mActivity, SaveActivity.class));
+            startActivity(new Intent(mActivity, SaveStateActivity.class));
         } else if (id == R.id.btn_receiver_send) {
             Intent intent = new Intent(mActivity, AlReceiver.class);
             intent.setAction("com.pachen.cool.service.AL_ACTION");

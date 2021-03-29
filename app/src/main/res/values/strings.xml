@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android 组件</string>
+    <string name="app_name">组件</string>
     <string name="app_name_title">生命周期和启动模式</string>
     <string name="task_affinity_task">com.lifecycle.ponent.task_affinity_task</string>
 

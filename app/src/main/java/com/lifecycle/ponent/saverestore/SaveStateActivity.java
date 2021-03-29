@@ -1,25 +1,30 @@
 package com.lifecycle.ponent.saverestore;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 
 import com.lifecycle.ponent.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//在第二个Activity中配置转屏，观察Activity重建时RecycleView的状态
-//异常销毁时，顺序:onPause->onSaveInstanceState->onStop->onDestroy
-//重建启动时，顺序:onCreate->onStart->onRestoreInstanceState->onResume
-public class SaveActivity extends Activity {
-    private String TAG = "ActivitySaveLifeCycle";
-    RecycleViewAdapter mRecycleViewAdapter;
+/**
+ * 在第二个Activity中配置转屏，观察Activity重建时RecycleView的状态
+ * 异常销毁时，顺序:onPause->onStop->onSaveInstanceState->onDestroy
+ * 进入后台时,（home 或 被压住 ）顺序:onPause->onStop->onSaveInstanceState
+ * 重建启动时，顺序:onCreate->onStart->onRestoreInstanceState->onResume
+ */
+public class SaveStateActivity extends AppCompatActivity {
+    private String TAG = "SaveStateActivityTAG";
+    private RecycleViewAdapter mRecycleViewAdapter;
     private RecyclerView mRecyvleView;
-    List<String> mList = new ArrayList<>();
+    private List<String> mList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,12 @@ public class SaveActivity extends Activity {
         mRecyvleView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         mRecyvleView.setAdapter(mRecycleViewAdapter);
 
+        findViewById(R.id.tv_second).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SaveStateActivity.this, SaveSecondActivity.class));
+            }
+        });
     }
 
     private void initData() {
@@ -69,7 +80,7 @@ public class SaveActivity extends Activity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString("savedTest", "savedText");
+        outState.putString("savedTest", "savedTextHi");
         Log.d(TAG, getClass().getSimpleName() + " onSaveInstanceState");
     }
 
@@ -85,7 +96,6 @@ public class SaveActivity extends Activity {
         Log.d(TAG, getClass().getSimpleName() + " onPause");
     }
 
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -97,7 +107,6 @@ public class SaveActivity extends Activity {
         super.onRestart();
         Log.d(TAG, getClass().getSimpleName() + " onRestart");
     }
-
 
     @Override
     protected void onStop() {
