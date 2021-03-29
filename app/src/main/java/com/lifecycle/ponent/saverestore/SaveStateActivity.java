@@ -16,9 +16,9 @@ import java.util.List;
 
 /**
  * 在第二个Activity中配置转屏，观察Activity重建时RecycleView的状态
- * 异常销毁时，顺序:onPause->onStop->onSaveInstanceState->onDestroy
- * 进入后台时,（home 或 被压住 ）顺序:onPause->onStop->onSaveInstanceState
- * 重建启动时，顺序:onCreate->onStart->onRestoreInstanceState->onResume
+ * 异常销毁时，顺序:onPause -> onStop -> onSaveInstanceState ->  onDestroy
+ * 进入后台时,（home 或 被压住 ）顺序:onPause -> onStop -> onSaveInstanceState
+ * 重建启动时，顺序:onCreate -> onStart -> onRestoreInstanceState -> onResume
  */
 public class SaveStateActivity extends AppCompatActivity {
     private String TAG = "SaveStateActivityTAG";

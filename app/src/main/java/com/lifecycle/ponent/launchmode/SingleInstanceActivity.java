@@ -1,6 +1,4 @@
 package com.lifecycle.ponent.launchmode;
-
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.lifecycle.ponent.R;

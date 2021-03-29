@@ -39,10 +39,7 @@ public class LaunchModeActivity extends AppCompatActivity implements View.OnClic
 
         //打印当前任务栈
         StringBuilder sbtitle = new StringBuilder();
-        sbtitle.append(this.getClass().getSimpleName());
-        sbtitle.append("\t");
-        sbtitle.append("任务栈Id");
-        sbtitle.append("\t");
+        sbtitle.append("任务栈Id:");
         sbtitle.append(getTaskId());
         setTitle(sbtitle);
 
