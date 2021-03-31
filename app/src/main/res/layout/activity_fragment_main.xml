@@ -13,6 +13,6 @@
     <com.lifecycle.ponent.homefragment.FooterBarView
         android:id="@+id/footer_view_menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="50dp" />
 
 </LinearLayout>

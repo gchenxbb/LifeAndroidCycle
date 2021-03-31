@@ -13,7 +13,7 @@ public class BaseActivity extends AppCompatActivity {
         StackTraceElement[] stes = Thread.currentThread().getStackTrace();
         for (StackTraceElement element : stes) {
             String name = this.getClass().getName();
-            if (element.getClassName().equals(this.getClass().getName())) {
+            if (element.getClassName().equals(name)) {
                 if (!element.getMethodName().equals("ALog") && !element.getMethodName().equals("getCurrentMethodName"))
                     return element.getMethodName();
             }

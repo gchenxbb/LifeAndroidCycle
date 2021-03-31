@@ -20,7 +20,7 @@ import com.lifecycle.ponent.service.ServiceLifeCycleActivity;
 /**
  * 我的Fragment
  */
-public class MineFragment extends BaseFragment implements View.OnClickListener{
+public class MineFragment extends BaseFragment implements View.OnClickListener {
     private TextView mBtnLifeA;
     private TextView mBtnSave;
     private TextView mBtnLifeS;
@@ -59,10 +59,10 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if (id == R.id.btn_launch_mode) {
-            startActivity(new Intent(mActivity, LaunchModeActivity.class));
-        } else if (id == R.id.btn_life_a) {
+        if (id == R.id.btn_life_a) {
             startActivity(new Intent(mActivity, AActivity.class));
+        } else if (id == R.id.btn_launch_mode) {
+            startActivity(new Intent(mActivity, LaunchModeActivity.class));
         } else if (id == R.id.btn_life_s) {
             startActivity(new Intent(mActivity, ServiceLifeCycleActivity.class));
         } else if (id == R.id.btn_life_save) {
