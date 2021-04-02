@@ -24,7 +24,8 @@ public class SingleTop_aTR_Activity extends Activity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        Toast.makeText(SingleTop_aTR_Activity.this, "onNewIntent == > 调用：" + intent.getPackage(), Toast.LENGTH_LONG).show();
+        Log.d(TAG, getClass().getSimpleName() + ":" + "onNewIntent == > 调用");
+        Toast.makeText(SingleTop_aTR_Activity.this, getClass().getSimpleName() + ":" + "onNewIntent == > 调用：" + intent.getPackage(), Toast.LENGTH_LONG).show();
     }
 
     @Override

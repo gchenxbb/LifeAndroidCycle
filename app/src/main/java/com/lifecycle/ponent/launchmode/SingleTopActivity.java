@@ -25,8 +25,8 @@ public class SingleTopActivity extends LaunchModeActivity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         rootScView.setBackgroundResource(R.color.bg_green_700);
-        Log.d(TAG, "onNewIntent == > 调用");
-        Toast.makeText(SingleTopActivity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
+        Log.d(TAG, getClass().getSimpleName() + ":" + "onNewIntent == > 调用");
+        Toast.makeText(SingleTopActivity.this, getClass().getSimpleName() + ":" +"onNewIntent == > 调用", Toast.LENGTH_LONG).show();
     }
 
 }

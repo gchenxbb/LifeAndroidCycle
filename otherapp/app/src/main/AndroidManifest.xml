@@ -81,7 +81,7 @@
             android:name=".SingleTask_Af_Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:taskAffinity="@string/task_affinity_task">
+            android:taskAffinity="@string/task_affinity">
             <intent-filter>
                 <action android:name="com.launchmode.app.activityc_af" />
                 <category android:name="android.intent.category.DEFAULT" />

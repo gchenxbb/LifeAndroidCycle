@@ -22,8 +22,7 @@ public class LaunchModeActivity extends AppCompatActivity implements View.OnClic
     protected TextView mTvSingleInstance;
     protected TextView mTvSingleTaskAffinity1;
     protected TextView mTvSingleTaskAffinity2;
-
-    protected TextView mTvSingleTaskCode;
+    protected TextView mTvSingleTask_NEW_TASK;
 
     protected TextView mTvOtherProcess1;
     protected TextView mTvOtherProcess2;
@@ -61,9 +60,9 @@ public class LaunchModeActivity extends AppCompatActivity implements View.OnClic
             startActivity(new Intent(LaunchModeActivity.this, TaskAffinity1Activity.class));
         } else if (v == mTvSingleTaskAffinity2) {
             startActivity(new Intent(LaunchModeActivity.this, TaskAffinity2Activity.class));
-        } else if (v == mTvSingleTaskCode) {
-//            1.在Activity上下文之外启动Activity需要给Intent设置FLAG_ACTIVITY_NEW_TASK标志，不然会报异常。
-//            2.加了该标志，如果在同一个应用中进行Activity跳转，不会创建新的Task，只有在不同的应用中跳转才会创建新的Task
+        } else if (v == mTvSingleTask_NEW_TASK) {
+            //1.在Activity上下文之外启动Activity需要给Intent设置FLAG_ACTIVITY_NEW_TASK标志，不然会报异常。
+            //2.加了该标志，如果在同一个应用中进行Activity跳转，不会创建新的Task，只有在不同的应用中跳转才会创建新的Task
             Intent intent = new Intent(LaunchModeActivity.this, SingleTaskActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
@@ -126,8 +125,7 @@ public class LaunchModeActivity extends AppCompatActivity implements View.OnClic
         mTvSingleInstance = findViewById(R.id.singleInstance);
         mTvSingleTaskAffinity1 = findViewById(R.id.singleTask_taskAffinity1);
         mTvSingleTaskAffinity2 = findViewById(R.id.singleTask_taskAffinity2);
-
-        mTvSingleTaskCode = findViewById(R.id.singleTask_code);
+        mTvSingleTask_NEW_TASK = findViewById(R.id.singleTask_newtask);
 
         mTvOtherProcess1 = findViewById(R.id.other_process1);
         mTvOtherProcess2 = findViewById(R.id.other_process2);
@@ -145,7 +143,7 @@ public class LaunchModeActivity extends AppCompatActivity implements View.OnClic
         mTvSingleTaskAffinity1.setOnClickListener(this);
         mTvSingleTaskAffinity2.setOnClickListener(this);
 
-        mTvSingleTaskCode.setOnClickListener(this);
+        mTvSingleTask_NEW_TASK.setOnClickListener(this);
 
         mTvOtherProcess1.setOnClickListener(this);
         mTvOtherProcess2.setOnClickListener(this);
