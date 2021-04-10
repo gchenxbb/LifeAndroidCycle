@@ -15,6 +15,9 @@
         <activity android:name=".life.BActivity" />
         <activity android:name=".service.ServiceLifeCycleActivity" />
 
+        <!--启动流程-->
+        <activity android:name=".startup.StartActivity" />
+
         <!--保存状态-->
         <activity android:name=".saverestore.SaveStateActivity" />
         <activity android:name=".saverestore.SaveSecondActivity" />

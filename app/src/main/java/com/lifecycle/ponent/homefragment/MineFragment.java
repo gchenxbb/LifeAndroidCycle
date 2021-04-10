@@ -16,12 +16,14 @@ import com.lifecycle.ponent.life.AActivity;
 import com.lifecycle.ponent.receiver.AlReceiver;
 import com.lifecycle.ponent.saverestore.SaveStateActivity;
 import com.lifecycle.ponent.service.ServiceLifeCycleActivity;
+import com.lifecycle.ponent.startup.StartActivity;
 
 /**
  * 我的Fragment
  */
-public class MineFragment extends BaseFragment implements View.OnClickListener{
+public class MineFragment extends BaseFragment implements View.OnClickListener {
     private TextView mBtnLifeA;
+    private TextView mBtnStartup;
     private TextView mBtnSave;
     private TextView mBtnLifeS;
     private TextView mBtnLaunch;
@@ -40,9 +42,9 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
 
 
     protected void initView(View root) {
-
         mBtnLaunch = root.findViewById(R.id.btn_launch_mode);
         mBtnLifeA = root.findViewById(R.id.btn_life_a);
+        mBtnStartup = root.findViewById(R.id.btn_startup);
         mBtnLifeS = root.findViewById(R.id.btn_life_s);
         mBtnSave = root.findViewById(R.id.btn_life_save);
         mBtnSendReceiver = root.findViewById(R.id.btn_receiver_send);
@@ -51,6 +53,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
         mBtnSave.setOnClickListener(this);
         mBtnLaunch.setOnClickListener(this);
         mBtnLifeA.setOnClickListener(this);
+        mBtnStartup.setOnClickListener(this);
         mBtnLifeS.setOnClickListener(this);
         mBtnSendReceiver.setOnClickListener(this);
         mBtnIntentFilter.setOnClickListener(this);
@@ -59,10 +62,12 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if (id == R.id.btn_launch_mode) {
-            startActivity(new Intent(mActivity, LaunchModeActivity.class));
-        } else if (id == R.id.btn_life_a) {
+        if (id == R.id.btn_life_a) {
             startActivity(new Intent(mActivity, AActivity.class));
+        } else if (id == R.id.btn_launch_mode) {
+            startActivity(new Intent(mActivity, LaunchModeActivity.class));
+        } else if (id == R.id.btn_startup) {
+            startActivity(new Intent(mActivity, StartActivity.class));
         } else if (id == R.id.btn_life_s) {
             startActivity(new Intent(mActivity, ServiceLifeCycleActivity.class));
         } else if (id == R.id.btn_life_save) {
@@ -75,6 +80,5 @@ public class MineFragment extends BaseFragment implements View.OnClickListener{
             startActivity(new Intent(mActivity, IntentActivity.class));
         }
     }
-
 }
 

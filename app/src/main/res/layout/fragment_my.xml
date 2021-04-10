@@ -21,6 +21,21 @@
     <View style="@style/line_horizontal" />
 
     <TextView
+        android:id="@+id/btn_startup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px100"
+        android:background="@drawable/selector_common_bg_press"
+        android:clickable="true"
+        android:drawableEnd="@drawable/iv_arrow_right"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="@dimen/px20"
+        android:text="启动流程"
+        android:textSize="@dimen/common_text_size_32px" />
+
+    <View style="@style/line_horizontal" />
+
+    <TextView
         android:id="@+id/btn_launch_mode"
         android:layout_width="match_parent"
         android:layout_height="@dimen/px100"
@@ -33,9 +48,7 @@
         android:text="启动模式"
         android:textSize="@dimen/common_text_size_32px" />
 
-
     <View style="@style/line_horizontal" />
-
 
     <TextView
         android:id="@+id/btn_life_s"
