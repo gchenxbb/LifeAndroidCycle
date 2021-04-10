@@ -68,6 +68,8 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
             startActivity(new Intent(mActivity, LaunchModeActivity.class));
         } else if (id == R.id.btn_startup) {
             startActivity(new Intent(mActivity, StartActivity.class));
+        } else if (id == R.id.btn_launch_mode) {
+            startActivity(new Intent(mActivity, LaunchModeActivity.class));
         } else if (id == R.id.btn_life_s) {
             startActivity(new Intent(mActivity, ServiceLifeCycleActivity.class));
         } else if (id == R.id.btn_life_save) {

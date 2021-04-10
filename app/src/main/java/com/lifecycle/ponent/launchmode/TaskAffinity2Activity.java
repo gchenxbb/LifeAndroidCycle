@@ -20,8 +20,8 @@ public class TaskAffinity2Activity extends LaunchModeActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        Log.d(TAG, "onNewIntent == > 调用");
-        Toast.makeText(TaskAffinity2Activity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
+        Log.d(TAG, getClass().getSimpleName() + ":" + "onNewIntent == > 调用");
+        Toast.makeText(TaskAffinity2Activity.this, getClass().getSimpleName() + ":" + "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
     }
 }
 

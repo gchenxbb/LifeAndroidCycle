@@ -2,15 +2,18 @@ package com.lifecycle.ponent.life;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.lifecycle.ponent.R;
 
 /**
- * 生命周期-activity-a
+ * 生命周期-Activity-A
+ * <p>
+ * 启动a：onCreate-->onStart-->onResume
+ * 启动b：onPause-->onCreate-->onStart-->onResume-->onStop
+ * 关闭b:onPause-->onRestart-->onStart-->onResume-->onStop-->onDestory
+ * 关闭a:onPause-->onStop-->onDestory
  */
 public class AActivity extends BaseActivity {
     private TextView mBtnB;

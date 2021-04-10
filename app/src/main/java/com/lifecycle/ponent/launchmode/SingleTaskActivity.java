@@ -24,8 +24,8 @@ public class SingleTaskActivity extends LaunchModeActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        Log.d(TAG, "onNewIntent == > 调用");
-        Toast.makeText(SingleTaskActivity.this, "onNewIntent == > 调用", Toast.LENGTH_LONG).show();
+        Log.d(TAG, getClass().getSimpleName() + ":" +"onNewIntent == > 调用");
+        Toast.makeText(SingleTaskActivity.this, getClass().getSimpleName() + ":" +"onNewIntent == > 调用", Toast.LENGTH_LONG).show();
         rootScView.setBackgroundResource(R.color.bg_green_500);
     }
 

@@ -55,13 +55,13 @@
             android:name=".launchmode.TaskAffinity1Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:taskAffinity="@string/task_affinity_task" /><!--taskAffinity是字符串，需要包含.字符，否则应用安装失败-->
+            android:taskAffinity="@string/task_affinity" /><!--taskAffinity是字符串，需要包含.字符，否则应用安装失败-->
         <!--singleTask with taskAffinity E和F在同一个栈中 E和F在同一个栈中-->
         <activity
             android:name=".launchmode.TaskAffinity2Activity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:taskAffinity="@string/task_affinity_task" />
+            android:taskAffinity="@string/task_affinity" />
 
         <!--service启动流程-->
         <service

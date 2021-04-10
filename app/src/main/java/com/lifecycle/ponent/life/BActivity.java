@@ -1,8 +1,6 @@
 package com.lifecycle.ponent.life;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import com.lifecycle.ponent.R;
 
@@ -10,7 +8,7 @@ import com.lifecycle.ponent.R;
  * 生命周期-Activity-B
  */
 public class BActivity extends BaseActivity {
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,5 +51,4 @@ public class BActivity extends BaseActivity {
         super.onDestroy();
         ALog();
     }
-
 }
