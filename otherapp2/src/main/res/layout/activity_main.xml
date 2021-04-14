@@ -92,4 +92,14 @@
 返回时，回到前一个app栈，因为这是本app新开的栈，当前只有它自己。"
         android:textColor="#353535"
         android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_send_broadex"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#d4f4f4"
+        android:gravity="center"
+        android:text="打开外部App广播"
+        android:textColor="#353535"
+        android:textSize="10sp" />
 </LinearLayout>

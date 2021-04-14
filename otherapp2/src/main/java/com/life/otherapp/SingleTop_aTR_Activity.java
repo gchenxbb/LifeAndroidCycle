@@ -1,4 +1,4 @@
-package com.launchmode.app;
+package com.life.otherapp;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -13,6 +13,8 @@ import android.widget.Toast;
  * 允许在其他进程退后台时，该activity回到该进程(主宿)app栈，如果该进程已经又栈在后台，会新建一个栈给它用。
  */
 public class SingleTop_aTR_Activity extends Activity {
+
+    private static final String TAG = "SingleTop_aTR_Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

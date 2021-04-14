@@ -22,6 +22,9 @@
         <activity android:name=".saverestore.SaveStateActivity" />
         <activity android:name=".saverestore.SaveSecondActivity" />
 
+        <!-- 发送广播-->
+        <activity android:name=".receiver.ReceiverActivity" />
+
         <!--     android:theme="@style/AppThemeTranslucent"  />-->
         <!--     当minSdkVersion和targetSdkVersion有一个大于13，配置,orientation和screenSize，旋转屏幕就不会重建Activity  />-->
         <!--     当minSdkVersion和targetSdkVersion都小于13，配置,orientation，旋转屏幕就不会重建Activity ，不重建就不会更换背景图片啦 />-->
@@ -71,7 +74,7 @@
         <!-- broadcast 广播 静态注册-->
         <receiver android:name=".receiver.AlReceiver">
             <intent-filter>
-                <action android:name="com.pachen.cool.service.AL_ACTION" />
+                <action android:name="com.ponent.receiver.AL_ACTION" />
             </intent-filter>
         </receiver>
 

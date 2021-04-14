@@ -69,7 +69,7 @@ public class LaunchModeActivity extends AppCompatActivity implements View.OnClic
         } else if (v == mTvOtherProcess1) {
             try {
                 Intent intent = new Intent();
-                intent.setAction("com.launchmode.app.activitya");
+                intent.setAction("com.life.otherapp.activitya");
                 startActivity(intent);
             } catch (Exception e) {
                 Toast.makeText(LaunchModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
@@ -77,7 +77,7 @@ public class LaunchModeActivity extends AppCompatActivity implements View.OnClic
         } else if (v == mTvOtherProcess2) {
             try {
                 Intent intent = new Intent();
-                intent.setAction("com.launchmode.app.activitya_atr");
+                intent.setAction("com.life.otherapp.activitya_atr");
                 startActivity(intent);
             } catch (Exception e) {
                 Toast.makeText(LaunchModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
@@ -85,7 +85,7 @@ public class LaunchModeActivity extends AppCompatActivity implements View.OnClic
         } else if (v == mTvOtherProcess3) {
             try {
                 Intent intent = new Intent();
-                intent.setAction("com.launchmode.app.activityb");
+                intent.setAction("com.life.otherapp.activityb");
                 startActivity(intent);
             } catch (Exception e) {
                 Toast.makeText(LaunchModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
@@ -93,7 +93,7 @@ public class LaunchModeActivity extends AppCompatActivity implements View.OnClic
         } else if (v == mTvOtherProcess4) {
             try {
                 Intent intent = new Intent();
-                intent.setAction("com.launchmode.app.activityb_atr");
+                intent.setAction("com.life.otherapp.activityb_atr");
                 startActivity(intent);
             } catch (Exception e) {
                 Toast.makeText(LaunchModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
@@ -101,7 +101,7 @@ public class LaunchModeActivity extends AppCompatActivity implements View.OnClic
         } else if (v == mTvOtherProcess5) {
             try {
                 Intent intent = new Intent();
-                intent.setAction("com.launchmode.app.activityc");
+                intent.setAction("com.life.otherapp.activityc");
                 startActivity(intent);
             } catch (Exception e) {
                 Toast.makeText(LaunchModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();
@@ -109,7 +109,7 @@ public class LaunchModeActivity extends AppCompatActivity implements View.OnClic
         } else if (v == mTvOtherProcess6) {
             try {
                 Intent intent = new Intent();
-                intent.setAction("com.launchmode.app.activityc_af");
+                intent.setAction("com.life.otherapp.activityc_af");
                 startActivity(intent);
             } catch (Exception e) {
                 Toast.makeText(LaunchModeActivity.this, e.getMessage() + "", Toast.LENGTH_LONG).show();

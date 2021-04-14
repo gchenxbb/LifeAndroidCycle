@@ -1,18 +1,19 @@
-package com.launchmode.app;
+package com.life.otherapp;
 
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 /**
- * standard模式
+ * singleTask + taskaffinity
  */
-public class Standard_Activity extends Activity {
+public class SingleTask_Af_Activity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_a);
+        setContentView(R.layout.activity_d);
         ActionBar actionBar = getActionBar();
         if (actionBar != null) {
             StringBuilder sbtitle = new StringBuilder();

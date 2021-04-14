@@ -1,2 +1,3 @@
 include ':app'
 include ':ipc'
+include ':otherapp2'

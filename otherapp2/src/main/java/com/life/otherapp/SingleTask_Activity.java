@@ -1,18 +1,17 @@
-package com.launchmode.app;
-
+package com.life.otherapp;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * singleTop模式
+ * singleTask模式
  */
-public class SingleTop_Activity extends Activity {
+public class SingleTask_Activity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_b);
+        setContentView(R.layout.activity_c);
         ActionBar actionBar = getActionBar();
         if (actionBar != null) {
             StringBuilder sbtitle = new StringBuilder();

@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">lifecycle_otherapp</string>
-    <string name="task_affinity">com.launchmode.app.taskaffinity</string>
+    <string name="task_affinity">com.life.otherapp.taskaffinity</string>
 </resources>

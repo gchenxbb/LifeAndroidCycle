@@ -1,4 +1,4 @@
-package com.launchmode.app;
+package com.life.otherapp;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -17,6 +17,7 @@ public class MainActivity extends Activity {
     protected TextView mTv4;
     protected TextView mTv5;
     protected TextView mTv6;
+    protected TextView mTv7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,8 @@ public class MainActivity extends Activity {
         mTv4 = findViewById(R.id.tv_singleTop_atr);
         mTv5 = findViewById(R.id.tv_singleTask);
         mTv6 = findViewById(R.id.tv_singleTask_af);
+        mTv7 = findViewById(R.id.tv_send_broadex);
+
         mTv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,6 +78,14 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, SingleTask_Af_Activity.class));
+            }
+        });
+        mTv7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction("com.ponent.receiver.DY_ACTION");
+                sendBroadcast(intent);
             }
         });
     }

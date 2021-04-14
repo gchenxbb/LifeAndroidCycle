@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.launchmode.app">
+    package="com.life.otherapp">
 
     <application
         android:allowBackup="true"
@@ -26,7 +26,7 @@
             android:name=".Standard_Activity"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="com.launchmode.app.activitya" />    <!-- 自定义的action-->
+                <action android:name="com.life.otherapp.activitya" />    <!-- 自定义的action-->
                 <category android:name="android.intent.category.DEFAULT" /><!--必须加上这个，否则下面无法直接使用自定的action-->
             </intent-filter>
         </activity>
@@ -37,7 +37,7 @@
             android:allowTaskReparenting="true"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="com.launchmode.app.activitya_atr" />
+                <action android:name="com.life.otherapp.activitya_atr" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -48,7 +48,7 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="com.launchmode.app.activityb" />
+                <action android:name="com.life.otherapp.activityb" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -60,7 +60,7 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="com.launchmode.app.activityb_atr" />
+                <action android:name="com.life.otherapp.activityb_atr" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -71,7 +71,7 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="com.launchmode.app.activityc" />
+                <action android:name="com.life.otherapp.activityc" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -83,7 +83,7 @@
             android:screenOrientation="portrait"
             android:taskAffinity="@string/task_affinity">
             <intent-filter>
-                <action android:name="com.launchmode.app.activityc_af" />
+                <action android:name="com.life.otherapp.activityc_af" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

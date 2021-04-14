@@ -1,4 +1,4 @@
-package com.launchmode.app;
+package com.life.otherapp;
 
 import android.app.ActionBar;
 import android.app.Activity;
